@@ -210,7 +210,15 @@
 <p>仓库性质选择public</p>
 <p>初始化可以选择添加一个readme</p>
 <p>仓库创建好后点击setting</p>
-<h4 id="2-安装配置hexo"><a href="#2-安装配置hexo" class="headerlink" title="2.安装配置hexo"></a>2.安装配置hexo</h4><p>前提是已经安装并配置好了node.js 和 npm工具，</p>
+<p><img src="D:\application\typoraImage\image-20210625123221163.png" alt="image-20210625123221163"></p>
+<p>分支选择master，目前主分支为main也可选择main，选择一个主题，出现 <code>your github pages site is currently built from the master branch</code> 说明配置成功，未成功则复制提示内容百度搜索 ，上图是因为配置了域名，显示为发布在该域名，后续会介绍如何绑定到自己的域名</p>
+<h4 id="2-安装配置hexo"><a href="#2-安装配置hexo" class="headerlink" title="2.安装配置hexo"></a>2.安装配置hexo</h4><p>前提是已经安装并配置好了node.js 和 npm工具，选择一个盘创建一个文件夹例如：Blog</p>
+<p>在Blog中打开git bash here</p>
+<p>安装hexo：<code>npm install -g hexo-cli</code></p>
+<p>安装完成后在系统path环境变量中新增  D:\Blog\node_modules\hexo-cli\bin 其中D:\Blog即刚才hexo的安装目录</p>
+<p>初始化：<code>hexo init</code></p>
+<p>静态部署：<code>hexo g</code>    # g 是generate的简称</p>
+<p>接着使用：<code>hexo s</code> 可以在本地访问部署的网页</p>
 
             
     </div>

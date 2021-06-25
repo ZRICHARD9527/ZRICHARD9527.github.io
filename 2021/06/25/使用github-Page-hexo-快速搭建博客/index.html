@@ -15,13 +15,15 @@
 <meta property="og:site_name" content="Richard的小博客">
 <meta property="og:description" content="简介 2021.06.25 下午利用实训的时间学习并搭建了个人博客，以下认识不够完善也比较粗浅，参考了很多其他博客，用以学习记录，归纳整理  Hexo是一款非常流行的博客搭建框架，Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。简单来说就是将用户的markdown文章转换为静态网页。用户还可以非常方便地选择各种主题，并进行自定义，整个过程基本不">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="d:/application/typoraImage/image-20210625123221163.png">
 <meta property="article:published_time" content="2021-06-25T01:28:00.000Z">
-<meta property="article:modified_time" content="2021-06-25T03:51:29.985Z">
+<meta property="article:modified_time" content="2021-06-25T04:48:18.448Z">
 <meta property="article:author" content="Richard">
 <meta property="article:tag" content="hexo">
 <meta property="article:tag" content="GitHub Page">
 <meta property="article:tag" content="博客搭建">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="d:/application/typoraImage/image-20210625123221163.png">
   
     <link rel="alternative" href="/atom.xml" title="Richard的小博客" type="application/atom+xml">
   
@@ -215,7 +217,15 @@
 <p>仓库性质选择public</p>
 <p>初始化可以选择添加一个readme</p>
 <p>仓库创建好后点击setting</p>
-<h4 id="2-安装配置hexo"><a href="#2-安装配置hexo" class="headerlink" title="2.安装配置hexo"></a>2.安装配置hexo</h4><p>前提是已经安装并配置好了node.js 和 npm工具，</p>
+<p><img src="D:\application\typoraImage\image-20210625123221163.png" alt="image-20210625123221163"></p>
+<p>分支选择master，目前主分支为main也可选择main，选择一个主题，出现 <code>your github pages site is currently built from the master branch</code> 说明配置成功，未成功则复制提示内容百度搜索 ，上图是因为配置了域名，显示为发布在该域名，后续会介绍如何绑定到自己的域名</p>
+<h4 id="2-安装配置hexo"><a href="#2-安装配置hexo" class="headerlink" title="2.安装配置hexo"></a>2.安装配置hexo</h4><p>前提是已经安装并配置好了node.js 和 npm工具，选择一个盘创建一个文件夹例如：Blog</p>
+<p>在Blog中打开git bash here</p>
+<p>安装hexo：<code>npm install -g hexo-cli</code></p>
+<p>安装完成后在系统path环境变量中新增  D:\Blog\node_modules\hexo-cli\bin 其中D:\Blog即刚才hexo的安装目录</p>
+<p>初始化：<code>hexo init</code></p>
+<p>静态部署：<code>hexo g</code>    # g 是generate的简称</p>
+<p>接着使用：<code>hexo s</code> 可以在本地访问部署的网页</p>
 
             
     </div>
