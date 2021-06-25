@@ -177,36 +177,41 @@
 
               
 
-              <h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><blockquote>
-<p>2021.06.25 下午利用实训的时间学习并搭建了个人博客，以下认识不够完善也比较粗浅，用以学习记录</p>
+              <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><blockquote>
+<p>2021.06.25 下午利用实训的时间学习并搭建了个人博客，以下认识不够完善也比较粗浅，参考了很多其他博客，用以学习记录，归纳整理</p>
 </blockquote>
 <h4 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h4><p>是一款非常流行的博客搭建框架，Hexo 使用 <a target="_blank" rel="noopener" href="http://daringfireball.net/projects/markdown/">Markdown</a>（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。简单来说就是将用户的markdown文章转换为静态网页。用户还可以非常方便地选择各种主题，并进行自定义，整个过程基本不需要自己写前端代码，但最好有一些前端知识。</p>
 <h4 id="GitHub-Page"><a href="#GitHub-Page" class="headerlink" title="GitHub Page"></a>GitHub Page</h4><p>用来托管个人的静态网站，所以可以用来搭建个人博客，也不用去写后端，但是有一些限制，比如：</p>
 <ul>
-<li><code>GitHub Pages</code> 源仓库建议限制为1GB；</li>
-<li>发布的 <code>GitHub Pages</code> 网站可能不超过1GB；</li>
-<li><code>GitHub Pages</code> 网站每月的带宽限制为100GB；</li>
-<li><code>GitHub Pages</code> 网站每小时限制10个软件。</li>
+<li>GitHub Pages 源仓库建议限制为<code>1GB</code>；</li>
+<li>发布的 GitHub Pages 网站可能不超过<code>1GB</code>；</li>
+<li>GitHub Pages 网站每月的带宽限制为<code>100GB</code>；</li>
+<li>GitHub Pages 网站每小时限制<code>10</code>个软件。</li>
 </ul>
 <p>此外，GitHub Pages网站必须避免：</p>
 <ul>
 <li>我们的“服务条款”或“社区准则”中的非法或其他方式禁止的内容或活动</li>
 <li>暴力或威胁的内容或活动</li>
 <li>自动批量活动过多（例如垃圾邮件）</li>
-<li>危及 <code>GitHub</code> 用户或 <code>GitHub</code> 服务的活动</li>
+<li>危及 GitHub 用户或 GitHub 服务的活动</li>
 <li>丰富快速的方案</li>
 <li>性淫秽内容</li>
 <li>内容误导您的身份或网站目的</li>
 </ul>
-<p>所以我们使用GitHub Page + Hexo 搭建一个简单的个人博客</p>
-<h3 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h3><p>在开始搭建前需要做一些准备工作：</p>
+<p>简而言之通过hexo与githubPage我们可以省去写后端与前端，可以非常方便快捷地搭建一个样式精美的个人博客，也可以不用占用自己的服务器资源，所以我们使用GitHub Page + Hexo 搭建一个简单的个人博客</p>
+<h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><p>在开始搭建前需要做一些准备工作：</p>
 <ul>
 <li>创建一个GitHub账户，学习创建仓库</li>
 <li>学习git相关知识，用ssh-key绑定本地和远程仓库</li>
 <li>安装node.js 和 npm</li>
 </ul>
 <p>以上知识都可以在网上获得</p>
-<h3 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h3>
+<h2 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h2><h4 id="1-创建GitHub-Page"><a href="#1-创建GitHub-Page" class="headerlink" title="1.创建GitHub Page"></a>1.创建GitHub Page</h4><p>创建方法和普通仓库基本一致，注意仓库名称一定要写成 <code>username.github.io</code>  其中username是本人github账户的用户名，其他名称无效，将来访问地址便是 <a target="_blank" rel="noopener" href="http://username.github.io/">http://username.github.io</a> ,比如本人的github用户名为zrichard9527，访问地址便是 <a target="_blank" rel="noopener" href="http://zrichard9527.github.io/">http://zrichard9527.github.io</a> 所以每个用户最多可以创建一个这样用域名直接访问的仓库。</p>
+<p>仓库性质选择public</p>
+<p>初始化可以选择添加一个readme</p>
+<p>仓库创建好后点击setting</p>
+<h4 id="2-安装配置hexo"><a href="#2-安装配置hexo" class="headerlink" title="2.安装配置hexo"></a>2.安装配置hexo</h4><p>前提是已经安装并配置好了node.js 和 npm工具，</p>
+
             
     </div>
     <div class="article-info article-info-index">
@@ -217,7 +222,15 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">-hexo -GitHub Page</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">GitHub Page</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">博客搭建</a>
         		</li>
       		
 		</ul>
@@ -285,14 +298,18 @@
 <p>my qq: 2034962359</p>
 <h2 id="HEXO-Blog-Quick-Start"><a href="#HEXO-Blog-Quick-Start" class="headerlink" title="HEXO Blog Quick Start"></a>HEXO Blog Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
 
+<p>标题中间有空格必须使用引号包含起来，否则可以直接写</p>
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
 <h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
 
+<p>本地模拟</p>
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
 <h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
 
+<p>生成静态文件</p>
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><p>挂载到远程站点</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 
@@ -428,7 +445,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">-hexo -GitHub Page</a>
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">GitHub Page</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">博客搭建</a>
               </li>
             
             <div class="clearfix"></div>
