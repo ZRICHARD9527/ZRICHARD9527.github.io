@@ -65,7 +65,13 @@
 				<li><a href="/tags/">标签</a></li>
 	        
 			</ul>
+
 		</nav>
+<!--左侧统计文章数-->
+<nav>
+	<a>总文章数 3</a>
+</nav>
+
 		<nav class="header-smart-menu">
     		
     			
@@ -165,9 +171,9 @@
  <!--0626 添加代码不蒜子统计访问量-->
 
  
-        <!-- 不蒜子统计 删去span id  id="busuanzi_container_page_pv"-->
+        <!-- 不蒜子统计-->
        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-       <span style='display:none' class="archive-article-date">
+       <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
               <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
         </span>
 
@@ -432,6 +438,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
              
@@ -441,10 +451,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">博客搭建</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
             
             <div class="clearfix"></div>
