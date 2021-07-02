@@ -7,15 +7,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://zrichard9527.github.io">
-  <title>Tag: hexo | Richard的小博客</title>
+  <title>关于无效SYN数据包检测 | Richard的小博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Richard的小博客">
-<meta property="og:url" content="http://zrichard9527.github.io/tags/hexo/index.html">
+  <meta name="description" content="关于无效SYN数据包的识别，来源于大三上实训时所想  SYN洪泛攻击介绍SYN洪泛攻击是一种典型的DOS攻击，其原理是，由于TCP是一种面向连接、可靠的网络协议，在使用TCP协议传输数据前首先需要通过3次握手建立连接。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="关于无效SYN数据包检测">
+<meta property="og:url" content="http://zrichard9527.github.io/2021/07/02/%E5%85%B3%E4%BA%8E%E6%97%A0%E6%95%88SYN%E6%95%B0%E6%8D%AE%E5%8C%85%E6%A3%80%E6%B5%8B/index.html">
 <meta property="og:site_name" content="Richard的小博客">
+<meta property="og:description" content="关于无效SYN数据包的识别，来源于大三上实训时所想  SYN洪泛攻击介绍SYN洪泛攻击是一种典型的DOS攻击，其原理是，由于TCP是一种面向连接、可靠的网络协议，在使用TCP协议传输数据前首先需要通过3次握手建立连接。">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="d:/application/typoraImage/image-20210702230028012.png">
+<meta property="article:published_time" content="2021-07-02T14:55:10.000Z">
+<meta property="article:modified_time" content="2021-07-02T15:02:13.742Z">
 <meta property="article:author" content="Richard">
+<meta property="article:tag" content="SYN洪泛攻击检测">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="d:/application/typoraImage/image-20210702230028012.png">
   
     <link rel="alternative" href="/atom.xml" title="Richard的小博客" type="application/atom+xml">
   
@@ -151,73 +158,175 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-关于无效SYN数据包检测" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2021" class="archive-year">2021</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
- <!--0626 添加代码不蒜子统计访问量-->
-
- 
-
-<a href="/2021/06/25/%E4%BD%BF%E7%94%A8github-Page-hexo-%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/" class="archive-article-date">
-  	<time datetime="2021-06-25T01:28:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-25</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/06/25/%E4%BD%BF%E7%94%A8github-Page-hexo-%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/">使用github Page + hexo 快速搭建博客</a>
+    <h1 class="article-title" itemprop="name">
+      关于无效SYN数据包检测
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        
+ <!--0626 添加代码不蒜子统计访问量-->
+
+ 
+        <!-- 不蒜子统计-->
+       <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+       <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+
+
+<a href="/2021/07/02/%E5%85%B3%E4%BA%8E%E6%97%A0%E6%95%88SYN%E6%95%B0%E6%8D%AE%E5%8C%85%E6%A3%80%E6%B5%8B/" class="archive-article-date">
+  	<time datetime="2021-07-02T14:55:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-07-02</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+            
+
+              
+
+              <blockquote>
+<p>关于无效SYN数据包的识别，来源于大三上实训时所想</p>
+</blockquote>
+<h5 id="SYN洪泛攻击介绍"><a href="#SYN洪泛攻击介绍" class="headerlink" title="SYN洪泛攻击介绍"></a>SYN洪泛攻击介绍</h5><p>SYN洪泛攻击是一种典型的DOS攻击，其原理是，由于TCP是一种面向连接、可靠的网络协议，在使用TCP协议传输数据前首先需要通过3次握手建立连接。<span id="more"></span></p>
+<p>SYN洪泛攻击则是针对TCP的特性，利用的就是TCP三次握手机制的缺陷，攻击者建立TCP连接时发送SYN包，SYN是TCP三次握手中的第一个数据包，而当这个服务器返回ACK以后，攻击者不再进行确认，那这个连接就处在挂起的状态，服务器收不到再确认的消息时，会重复发送ACK给攻击者。这样就会更加浪费服务器的资源。攻击者对服务器发送非法大量的这种TCP连接，由于每一个都没法完成握手的机制，所以它就会消耗服务器的内存最后可能导致服务器死机。</p>
+<h5 id="SYN洪泛攻击判定"><a href="#SYN洪泛攻击判定" class="headerlink" title="SYN洪泛攻击判定"></a>SYN洪泛攻击判定</h5><p>针对SYN洪泛攻击的特点，主机受到SYN洪泛攻击时会收到大量没有响应的SYN包。所以本程序判定受到SYN洪泛攻击的原理即通过判定无效SYN包出现的频率是否达到事先设置的阈值，如果达到了则认为测点受到了SYN洪泛攻击。在系统运行时会设置一个无效SYN包检测量，测点在网络中有两种身份，既可以是请求的发起方也可以是请求的接收方。当测点为接收方时，收到SYN包只有一种情况，即请求方第一次握手时，这时先将检测量加1，之后，如果请求方在本测点响应后还会发送一个ACK包确认，对ACK包中的ack值判断是否为测点响应seq+1，如果是的话则说明连接成功，此前SYN包不是无效SYN包，对检测量减1。当测点为请求方时也会收到SYN包，是在三次握手的第二次，此时数据包中flags字段的SYN和ACK都为1，这种情况不需要对检测量操作。</p>
+<p>本项目通过Java后端使用JNI调用C/C++，将结果在前端进行展示。在JNI调用时，每次从网卡中读取一定数量的包，对其无效SYN与阈值进行比较。这时需额外考虑每次抓包数的问题，如果抓包数过少，可能会导致抓包期间统计的TCP数据报无效SYN包检测值不达阈值导致错误判断没有受到SYN洪泛攻击，为了防止这种情况，在C/C++中只有判定受到攻击时才会对检测量进行清空重新计数，否则会累加，此时若用0和1分别代表正常和受到SYN洪泛攻击，返回的为连续1，说明受到攻击，且抓包数大于等于理想抓包数（本课题中定义的理想抓包数即满足抓包数最小且能识别出是否受到攻击）。返回值为有规律的01序列时，也应该判断为受到攻击，之所以会出现0是因为每次抓包数小于理想抓包数。</p>
+<h5 id="算法逻辑"><a href="#算法逻辑" class="headerlink" title="算法逻辑"></a>算法逻辑</h5><p><img src="D:\application\typoraImage\image-20210702230028012.png" alt="image-20210702230028012"></p>
+
+            
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">GitHub Page</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">博客搭建</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">SYN洪泛攻击检测</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://zrichard9527.github.io/2021/07/02/%E5%85%B3%E4%BA%8E%E6%97%A0%E6%95%88SYN%E6%95%B0%E6%8D%AE%E5%8C%85%E6%A3%80%E6%B5%8B/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2021/06/26/%E9%9A%8F%E7%AC%94/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">随笔</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+  <div id="SOHUCS" sid="关于无效SYN数据包检测" ></div> 
+<script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
+<script type="text/javascript">
+    window.changyan.api.config({
+        appid: "cyvwEGDgV",
+        conf: "7a2b35ce4ad9218ea4daedb4fc89a1a2"
+    });
+</script>
+</script>
+  
+
+  
+
+  
 
 
           </div>
@@ -258,9 +367,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
