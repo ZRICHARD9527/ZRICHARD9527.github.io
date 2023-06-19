@@ -200,8 +200,8 @@
 <p>多线程可以提高程序的性能和响应速度。当一个任务需要等待某个操作完成时，单线程程序会一直等待，而多线程程序则可以通过创建新的线程来执行其他任务，从而提高程序的效率。</p>
 </blockquote>
 <span id="more"></span>
-
-<h4 id="生命周期"><a href="#生命周期" class="headerlink" title="生命周期"></a>生命周期</h4><p>Java线程的生命周期可以分为以下6个状态：</p>
+<h4 id="生命周期"><a class="header-anchor" href="#生命周期"> </a>生命周期</h4>
+<p>Java线程的生命周期可以分为以下6个状态：</p>
 <ol>
 <li>新建状态（New）：当我们使用new操作符创建一个Thread对象时，该线程处于新建状态。此时线程尚未启动，不具备运行能力。</li>
 <li>就绪状态（Runnable）：当调用start()方法启动线程之后，线程进入就绪状态。此时线程已经具备了运行能力，并等待CPU的调度执行。</li>
@@ -211,23 +211,26 @@
 <li>终止状态（Terminated）：当线程完成其任务或者出现异常时，它将进入终止状态。此时线程已经结束，不再具有运行能力。</li>
 </ol>
 <p>总之，Java线程的生命周期可以分为新建、就绪、运行、阻塞、等待和终止六个状态，这些状态会根据线程的运行情况不断转换。理解Java线程生命周期对于开发高效的多线程应用程序非常重要。</p>
-<h4 id="实现方法"><a href="#实现方法" class="headerlink" title="实现方法"></a>实现方法</h4><p>1.继承Thread类：创建一个继承自Thread类的子类，在子类中重写run()方法来定义线程要执行的代码。然后创建该子类的实例对象并调用start()方法来启动线程。</p>
+<h4 id="实现方法"><a class="header-anchor" href="#实现方法"> </a>实现方法</h4>
+<p>1.继承Thread类：创建一个继承自Thread类的子类，在子类中重写run()方法来定义线程要执行的代码。然后创建该子类的实例对象并调用start()方法来启动线程。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyThread</span> <span class="keyword">extends</span> <span class="title">Thread</span> </span>&#123;</span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">      <span class="comment">// 线程要执行的代码</span></span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">      MyThread thread = <span class="keyword">new</span> MyThread();</span><br><span class="line">      thread.start();</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <p>2.实现Runnable接口：创建一个实现了Runnable接口的类，在该类中实现run()方法来定义线程要执行的代码。然后创建该类的实例对象并将其作为参数传递给Thread类的构造函数中，并调用start()方法来启动线程。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyRunnable</span> <span class="keyword">implements</span> <span class="title">Runnable</span> </span>&#123;</span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">      <span class="comment">// 线程要执行的代码</span></span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">      MyRunnable runnable = <span class="keyword">new</span> MyRunnable();</span><br><span class="line">      Thread thread = <span class="keyword">new</span> Thread(runnable);</span><br><span class="line">      thread.start();</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <p>3.使用匿名内部类：可以在创建Thread或Runnable对象时使用匿名内部类来直接定义线程要执行的代码。这种方式通常用于只需要定义较短的线程代码的情况。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Thread thread = <span class="keyword">new</span> Thread(<span class="keyword">new</span> Runnable()&#123;</span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">      <span class="comment">// 线程要执行的代码</span></span><br><span class="line">   &#125;</span><br><span class="line">&#125;);</span><br><span class="line">thread.start();</span><br></pre></td></tr></table></figure>
-
 <p>4.使用线程池：创建一个线程池来管理多个线程，可以重复利用线程对象，提高程序效率。可以使用Executors类中的工厂方法来创建线程池。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">ExecutorService executor = Executors.newFixedThreadPool(<span class="number">10</span>);</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">100</span>; i++) &#123;</span><br><span class="line">   executor.execute(<span class="keyword">new</span> Runnable() &#123;</span><br><span class="line">      <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">         <span class="comment">// 线程要执行的代码</span></span><br><span class="line">      &#125;</span><br><span class="line">   &#125;);</span><br><span class="line">&#125;</span><br><span class="line">executor.shutdown();</span><br></pre></td></tr></table></figure>
-
 <p>以上是几种常见的Java多线程实现方式。</p>
-<h4 id="sleep-和wait-的区别"><a href="#sleep-和wait-的区别" class="headerlink" title="sleep()和wait()的区别"></a>sleep()和wait()的区别</h4><p>sleep和wait方法都是Java中用于线程等待的方法。但是有以下区别：</p>
-<p>1.wait（）是Object类中的方法，而sleep（）是Thread类中方法；<br>2.wait（）会释放锁，是的其他线程可以获取该锁并执行相应的代码，sleep不会释放锁；<br>3.wait（）方法必须在synchronized块中调用，否则会抛出异常，sleep（）没有限制；<br>4.wait（）可以被notify（）或者notifyAll（）方法唤醒，也可以使用wait（long timeout），sleep（）只能等待一定时间后自动唤醒</p>
-<p>Java中每一个对象都有一个关联的锁，通过synchronized块可以获取该锁保证线程安全。wait（）的作用是释放当前线程获取的对象的锁，并让线程进入等待状态【由其他线程唤醒】。这就需要在Object类中实现相应方法；<br>sleep（）是线程级别的操作，不涉及任何对象的锁机制，只是让当前线程进入休眠状态。因此作为Thread的静态方法更合适。</p>
-<h4 id="线程池"><a href="#线程池" class="headerlink" title="线程池"></a>线程池</h4><p>Java线程池是一种可以重复使用多个线程的机制，可以用来执行并发任务。使用线程池可以避免频繁创建和销毁线程，提高系统的性能和稳定性。</p>
+<h4 id="sleep-和wait-的区别"><a class="header-anchor" href="#sleep-和wait-的区别"> </a>sleep()和wait()的区别</h4>
+<p>sleep和wait方法都是Java中用于线程等待的方法。但是有以下区别：</p>
+<p>1.wait（）是Object类中的方法，而sleep（）是Thread类中方法；<br>
+2.wait（）会释放锁，是的其他线程可以获取该锁并执行相应的代码，sleep不会释放锁；<br>
+3.wait（）方法必须在synchronized块中调用，否则会抛出异常，sleep（）没有限制；<br>
+4.wait（）可以被notify（）或者notifyAll（）方法唤醒，也可以使用wait（long timeout），sleep（）只能等待一定时间后自动唤醒</p>
+<p>Java中每一个对象都有一个关联的锁，通过synchronized块可以获取该锁保证线程安全。wait（）的作用是释放当前线程获取的对象的锁，并让线程进入等待状态【由其他线程唤醒】。这就需要在Object类中实现相应方法；<br>
+sleep（）是线程级别的操作，不涉及任何对象的锁机制，只是让当前线程进入休眠状态。因此作为Thread的静态方法更合适。</p>
+<h4 id="线程池"><a class="header-anchor" href="#线程池"> </a>线程池</h4>
+<p>Java线程池是一种可以重复使用多个线程的机制，可以用来执行并发任务。使用线程池可以避免频繁创建和销毁线程，提高系统的性能和稳定性。</p>
 <p>核心原理是线程复用，其思想就是在系统启动时创建一定数量的线程，处于等待状态，当任务队列中有任务需要执行时就从线程池中取出一个线程来执行任务，任务执行完毕后该线程并不会被销毁，而是返回到线程池中。</p>
 <p>线程池通常包含以下关键组件：</p>
 <p>1.线程池管理器（ThreadPoolExecutor）：负责管理线程池中所有线程，通过核心线程数、最大线程数、等待队列等参数来控制线程池的大小和行为。</p>
@@ -315,11 +318,11 @@
   
 <nav id="article-nav">
   
-    <a href="/2023/06/13/%E6%91%98%E5%BD%95/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2023/06/13/I-O-%E6%A8%A1%E5%9E%8B/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          摘录
+          I/O 模型
         
       </div>
     </a>

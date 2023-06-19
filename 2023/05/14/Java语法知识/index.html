@@ -12,12 +12,12 @@
   <meta name="description" content="Java相关知识">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java语法知识">
-<meta property="og:url" content="https://zrichard9527.github.io/2022/07/24/Java%E8%AF%AD%E6%B3%95%E7%9F%A5%E8%AF%86/index.html">
+<meta property="og:url" content="https://zrichard9527.github.io/2023/05/14/Java%E8%AF%AD%E6%B3%95%E7%9F%A5%E8%AF%86/index.html">
 <meta property="og:site_name" content="Richard&#39;s Blog">
 <meta property="og:description" content="Java相关知识">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-07-24T11:29:17.000Z">
-<meta property="article:modified_time" content="2023-05-18T05:24:30.872Z">
+<meta property="article:published_time" content="2023-05-14T11:29:17.000Z">
+<meta property="article:modified_time" content="2023-06-19T09:08:58.898Z">
 <meta property="article:author" content="Richard">
 <meta property="article:tag" content="Java">
 <meta name="twitter:card" content="summary">
@@ -184,8 +184,8 @@
         </span>
 
 
-<a href="/2022/07/24/Java%E8%AF%AD%E6%B3%95%E7%9F%A5%E8%AF%86/" class="archive-article-date">
-  	<time datetime="2022-07-24T11:29:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-07-24</time>
+<a href="/2023/05/14/Java%E8%AF%AD%E6%B3%95%E7%9F%A5%E8%AF%86/" class="archive-article-date">
+  	<time datetime="2023-05-14T11:29:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-05-14</time>
 </a>
         
       </header>
@@ -199,8 +199,8 @@
 <p>Java相关知识</p>
 </blockquote>
 <span id="more"></span>
-
-<h4 id="抽象类"><a href="#抽象类" class="headerlink" title="抽象类"></a>抽象类</h4><p>在Java中，抽象类是一种特殊的类，它不能被实例化，只能作为基类被继承，并且必须用 abstract 关键字来修饰。</p>
+<h4 id="抽象类"><a class="header-anchor" href="#抽象类"> </a>抽象类</h4>
+<p>在Java中，抽象类是一种特殊的类，它不能被实例化，只能作为基类被继承，并且必须用 abstract 关键字来修饰。</p>
 <p>抽象类的本质就是一个类模板，它提供了一些抽象的方法和属性，让子类来具体实现。抽象类不能被实例化，但是可以用来定义变量类型、创建引用对象等。相比于普通类，抽象类具有以下特点：</p>
 <ol>
 <li>抽象类不能被实例化。因为它只是一个抽象的概念，不能直接创建对象。</li>
@@ -208,9 +208,11 @@
 <li>子类必须实现父类中的所有抽象方法。否则，子类也必须声明为抽象类。</li>
 <li>抽象类可以拥有属性和构造方法。</li>
 </ol>
-<h4 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h4><p>在Java中，接口是一种特殊的抽象类，它定义了一个规范，但没有具体实现。接口与抽象类不同的是，接口中所有方法都是抽象的【默认为 public abstract 类型】，并且不能拥有成员变量（只能拥有常量）。接口可以被类实现，也可以被其他接口扩展。</p>
+<h4 id="接口"><a class="header-anchor" href="#接口"> </a>接口</h4>
+<p>在Java中，接口是一种特殊的抽象类，它定义了一个规范，但没有具体实现。接口与抽象类不同的是，接口中所有方法都是抽象的【默认为 public abstract 类型】，并且不能拥有成员变量（只能拥有常量）。接口可以被类实现，也可以被其他接口扩展。</p>
 <p>接口和抽象类本身不能实例化，但可以指向子类的实例，这是java多态的一种体现。</p>
-<h4 id="反射"><a href="#反射" class="headerlink" title="反射"></a>反射</h4><p>Java反射机制是指在运行时动态地获取类的信息并对其进行操作的能力。通过反射，可以在程序运行时获取类的全限定名、属性、方法等信息，并且可以在运行时调用类的构造器、方法或者改变属性值。</p>
+<h4 id="反射"><a class="header-anchor" href="#反射"> </a>反射</h4>
+<p>Java反射机制是指在运行时动态地获取类的信息并对其进行操作的能力。通过反射，可以在程序运行时获取类的全限定名、属性、方法等信息，并且可以在运行时调用类的构造器、方法或者改变属性值。</p>
 <p>Java反射机制包含以下三个核心类：Class、Constructor和Method。其中，Class类代表一个类的运行时信息，Constructor类表示类的构造器信息，Method类表示类的方法信息。</p>
 <p>使用反射机制的前提是需要获得一个类的Class对象，可以使用以下几种方式获取一个类的Class对象：</p>
 <ol>
@@ -220,8 +222,10 @@
 </ol>
 <p>一旦获取了一个类的Class对象，就可以通过它来获取该类的构造器、方法和属性等信息，并且可以在运行时调用这些方法，修改属性值，实例化对象等。</p>
 <p>Java反射机制可以使编程更加灵活，但同时也会降低程序的性能和安全性，应当慎重使用。</p>
-<h4 id="注解"><a href="#注解" class="headerlink" title="注解"></a>注解</h4><p>注解（Annotation）是Java编程语言中的一个特性，是一种元数据【Matadata，用于描述数据的数据，包括数据内容、格式、结构等信息。元数据通常是通过注解、XML配置文件、属性文件等形式来提供的，可以使得程序具有更高的可配置性，通过修改元数据来改变程序而无需修改代码】，可以用来为程序中的方法、类、变量等添加额外的信息和说明。</p>
-<h4 id="内存溢出与内存泄露"><a href="#内存溢出与内存泄露" class="headerlink" title="内存溢出与内存泄露"></a>内存溢出与内存泄露</h4><p>内存溢出（Memory Overflow）指的是程序在申请内存时，要求的内存大小超过了系统所能提供的可用内存大小，导致程序运行失败。通常情况下，内存溢出会导致程序崩溃或者异常结束，并且在操作系统中会生成一个错误报告。</p>
+<h4 id="注解"><a class="header-anchor" href="#注解"> </a>注解</h4>
+<p>注解（Annotation）是Java编程语言中的一个特性，是一种元数据【Matadata，用于描述数据的数据，包括数据内容、格式、结构等信息。元数据通常是通过注解、XML配置文件、属性文件等形式来提供的，可以使得程序具有更高的可配置性，通过修改元数据来改变程序而无需修改代码】，可以用来为程序中的方法、类、变量等添加额外的信息和说明。</p>
+<h4 id="内存溢出与内存泄露"><a class="header-anchor" href="#内存溢出与内存泄露"> </a>内存溢出与内存泄露</h4>
+<p>内存溢出（Memory Overflow）指的是程序在申请内存时，要求的内存大小超过了系统所能提供的可用内存大小，导致程序运行失败。通常情况下，内存溢出会导致程序崩溃或者异常结束，并且在操作系统中会生成一个错误报告。</p>
 <p>而内存泄露（Memory Leak）则是指程序在申请内存后，在释放该内存之前，失去了对这块内存的引用，从而导致这块内存无法被再次使用，最终可能导致系统内存逐渐耗尽，影响整个系统的正常运行。内存泄露通常不会导致程序直接崩溃，但会导致程序的性能和稳定性受到影响。</p>
 
             
@@ -290,7 +294,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://zrichard9527.github.io/2022/07/24/Java%E8%AF%AD%E6%B3%95%E7%9F%A5%E8%AF%86/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://zrichard9527.github.io/2023/05/14/Java%E8%AF%AD%E6%B3%95%E7%9F%A5%E8%AF%86/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -304,18 +308,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2022/10/19/%E5%9B%BE%E5%83%8F%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B%E7%BB%BC%E8%BF%B0/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2023/05/18/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          图像目标检测综述
+          设计模式
         
       </div>
     </a>
   
   
-    <a href="/2021/07/02/%E5%85%B3%E4%BA%8E%E6%97%A0%E6%95%88SYN%E6%95%B0%E6%8D%AE%E5%8C%85%E6%A3%80%E6%B5%8B/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">SYN洪泛攻击检测</div>
+    <a href="/2022/10/19/%E5%9B%BE%E5%83%8F%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B%E7%BB%BC%E8%BF%B0/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">图像目标检测综述</div>
       <i class="icon-circle-right"></i>
     </a>
   

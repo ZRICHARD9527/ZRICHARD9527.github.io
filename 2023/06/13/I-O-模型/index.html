@@ -9,12 +9,12 @@
   <link rel="dns-prefetch" href="https://zrichard9527.github.io">
   <title>I/O 模型 | Richard&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="I&#x2F;O模型Java I&#x2F;O模型是用于描述Java程序中数据输入输出操作、Java I&#x2F;O模型提供了一组抽象类和接口，用于处理不同类型的输入、输出流和文件系统。">
+  <meta name="description" content="I&#x2F;O模型 Java I&#x2F;O模型是用于描述Java程序中数据输入输出操作、Java I&#x2F;O模型提供了一组抽象类和接口，用于处理不同类型的输入、输出流和文件系统。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="I&#x2F;O 模型">
 <meta property="og:url" content="https://zrichard9527.github.io/2023/06/13/I-O-%E6%A8%A1%E5%9E%8B/index.html">
 <meta property="og:site_name" content="Richard&#39;s Blog">
-<meta property="og:description" content="I&#x2F;O模型Java I&#x2F;O模型是用于描述Java程序中数据输入输出操作、Java I&#x2F;O模型提供了一组抽象类和接口，用于处理不同类型的输入、输出流和文件系统。">
+<meta property="og:description" content="I&#x2F;O模型 Java I&#x2F;O模型是用于描述Java程序中数据输入输出操作、Java I&#x2F;O模型提供了一组抽象类和接口，用于处理不同类型的输入、输出流和文件系统。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-06-13T15:06:34.000Z">
 <meta property="article:modified_time" content="2023-06-13T15:17:11.620Z">
@@ -196,18 +196,24 @@
 
               
 
-              <h3 id="I-O模型"><a href="#I-O模型" class="headerlink" title="I/O模型"></a>I/O模型</h3><p>Java I/O模型是用于描述Java程序中数据输入输出操作、Java I/O模型提供了一组抽象类和接口，用于处理不同类型的输入、输出流和文件系统。</p>
+              <h3 id="I-O模型"><a class="header-anchor" href="#I-O模型"> </a>I/O模型</h3>
+<p>Java I/O模型是用于描述Java程序中数据输入输出操作、Java I/O模型提供了一组抽象类和接口，用于处理不同类型的输入、输出流和文件系统。</p>
 <span id="more"></span>
-
-<h4 id="流（stream）"><a href="#流（stream）" class="headerlink" title="流（stream）"></a>流（stream）</h4><p>Java的I/O模型基于流（stream）的概念。流是一个抽象概念，表示一组有序的数据，可以从一个地方向另一个地方传输。Java提供了两种类型的流：字节流和字符流。</p>
-<h5 id="字节流"><a href="#字节流" class="headerlink" title="字节流"></a>字节流</h5><p>字节流以字节为单位进行读写，并且通常与二进制数据打交道，如图像、音频、视频等。Java提供了两个基本的字节流类：InputStream和OutputStream。</p>
-<h5 id="字符流"><a href="#字符流" class="headerlink" title="字符流"></a>字符流</h5><p>字符流以字符为单位进行读写，并且通常与文本数据打交道，如文本文件等。Java提供了两个基本的字符流类：Reader和Writer。</p>
-<h4 id="BIO"><a href="#BIO" class="headerlink" title="BIO"></a>BIO</h4><p>BIO (Blocking I/O)是Java I/O模型中最常见的模型。在这个模型中，当一个线程需要读取或写入数据时，它会一直阻塞，直到所有数据都被读取或写入完成。这种方式非常简单，但是如果需要同时处理多个客户端连接时，性能将会受到很大影响。</p>
-<h4 id="NIO"><a href="#NIO" class="headerlink" title="NIO"></a>NIO</h4><p>new io 或者non-blocking io，是Java中一种基于通道（Channel）和缓冲区（Buffer）的IO操作，它提供了与传统的流（Stream）IO 操作不同的IO处理方式。</p>
+<h4 id="流（stream）"><a class="header-anchor" href="#流（stream）"> </a>流（stream）</h4>
+<p>Java的I/O模型基于流（stream）的概念。流是一个抽象概念，表示一组有序的数据，可以从一个地方向另一个地方传输。Java提供了两种类型的流：字节流和字符流。</p>
+<h5 id="字节流"><a class="header-anchor" href="#字节流"> </a>字节流</h5>
+<p>字节流以字节为单位进行读写，并且通常与二进制数据打交道，如图像、音频、视频等。Java提供了两个基本的字节流类：InputStream和OutputStream。</p>
+<h5 id="字符流"><a class="header-anchor" href="#字符流"> </a>字符流</h5>
+<p>字符流以字符为单位进行读写，并且通常与文本数据打交道，如文本文件等。Java提供了两个基本的字符流类：Reader和Writer。</p>
+<h4 id="BIO"><a class="header-anchor" href="#BIO"> </a>BIO</h4>
+<p>BIO (Blocking I/O)是Java I/O模型中最常见的模型。在这个模型中，当一个线程需要读取或写入数据时，它会一直阻塞，直到所有数据都被读取或写入完成。这种方式非常简单，但是如果需要同时处理多个客户端连接时，性能将会受到很大影响。</p>
+<h4 id="NIO"><a class="header-anchor" href="#NIO"> </a>NIO</h4>
+<p>new io 或者non-blocking io，是Java中一种基于通道（Channel）和缓冲区（Buffer）的IO操作，它提供了与传统的流（Stream）IO 操作不同的IO处理方式。</p>
 <blockquote>
 <p>Channel是一种抽象的数据传输通道，用于在缓冲区buffer和实体之间进行数据传输。</p>
 <p>Channel 相当于一个双向管道，可以通过它来读取和写入数据，使用 Channel 进行数据传输时，需要先创建一个缓冲区（Buffer），然后将数据从 Channel 写入缓冲区或从缓冲区读取数据到 Channel 中。这样可以避免直接对底层系统的 I/O 操作，提高了程序的性能和可靠性。Java NIO 提供了多个 Channel 接口的实现类，包括了 FileChannel、SocketChannel、ServerSocketChannel 和 DatagramChannel 等。</p>
-<h6 id="NIO-的通道类似于流，但有些区别如下："><a href="#NIO-的通道类似于流，但有些区别如下：" class="headerlink" title="NIO 的通道类似于流，但有些区别如下："></a>NIO 的通道类似于流，但有些<strong>区别</strong>如下：</h6><ul>
+<h6 id="NIO-的通道类似于流，但有些区别如下："><a class="header-anchor" href="#NIO-的通道类似于流，但有些区别如下："> </a>NIO 的通道类似于流，但有些<strong>区别</strong>如下：</h6>
+<ul>
 <li>通道可以同时进行读写，而流只能读或者只能写</li>
 <li>通道可以实现异步读写数据</li>
 <li>通道可以从缓冲读数据，也可以写数据到缓冲:</li>
@@ -225,11 +231,11 @@
 <blockquote>
 <p>下面这个基于Java NIO的样例：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"><span class="keyword">import</span> java.nio.ByteBuffer;</span><br><span class="line"><span class="keyword">import</span> java.nio.channels.SocketChannel;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">NioClient</span> </span>&#123;</span><br><span class="line"> <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">     SocketChannel socketChannel = SocketChannel.open();</span><br><span class="line">     socketChannel.connect(<span class="keyword">new</span> InetSocketAddress(<span class="string">&quot;example.com&quot;</span>, <span class="number">80</span>));</span><br><span class="line"></span><br><span class="line">     String message = <span class="string">&quot;Hello, server!&quot;</span>;</span><br><span class="line">     ByteBuffer buffer = ByteBuffer.allocate(<span class="number">1024</span>);</span><br><span class="line">     buffer.put(message.getBytes());</span><br><span class="line">     buffer.flip();</span><br><span class="line"></span><br><span class="line">     <span class="keyword">while</span> (buffer.hasRemaining()) &#123;</span><br><span class="line">         socketChannel.write(buffer);</span><br><span class="line">     &#125;</span><br><span class="line"></span><br><span class="line">     buffer.clear();</span><br><span class="line">     <span class="keyword">int</span> bytesRead = socketChannel.read(buffer);</span><br><span class="line"></span><br><span class="line">     <span class="keyword">while</span> (bytesRead != -<span class="number">1</span>) &#123;</span><br><span class="line">         buffer.flip();</span><br><span class="line">         <span class="keyword">while</span> (buffer.hasRemaining()) &#123;</span><br><span class="line">             System.out.print((<span class="keyword">char</span>) buffer.get());</span><br><span class="line">         &#125;</span><br><span class="line">         buffer.clear();</span><br><span class="line">         bytesRead = socketChannel.read(buffer);</span><br><span class="line">     &#125;</span><br><span class="line">     socketChannel.close();</span><br><span class="line"> &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <p>这个样例演示了如何使用NIO的SocketChannel来连接到一个远程服务器，并向其发送一条消息。首先，我们创建了一个SocketChannel对象，并使用它的connect()方法来连接到指定的服务器地址和端口。接着，我们将要发送的消息转换成ByteBuffer，并使用SocketChannel的write()方法将其发送给服务器。然后，我们使用同样的SocketChannel对象读取服务器响应，将其读入ByteBuffer中，并将其打印到控制台上。</p>
 <p>这个样例还演示了如何在NIO中使用ByteBuffer对象来处理输入输出数据。当我们需要读取数据时，我们首先调用flip()方法来准备缓冲区进行读操作。然后，我们可以通过调用get()方法逐个读取数据，并对其进行相应的处理。最后，我们使用clear()方法来清空缓冲区，以便可以再次使用它来读写数据。</p>
 </blockquote>
-<h4 id="AIO"><a href="#AIO" class="headerlink" title="AIO"></a>AIO</h4><p>AIO (Asynchronous I/O)是Java I/O模型的另一种改进版。主要用于处理网络通信和文件I/O操作，在这个模型中，I/O操作不再由程序自己完成，而是由操作系统完成。当一个I/O操作完成后，操作系统会通知应用程序，以便应用程序可以执行下一步操作。相比于NIO，AIO可以处理更多的连接，并且具有更好的可伸缩性。但是，AIO使用起来更复杂，对于一些简单的应用程序可能过于复杂。</p>
+<h4 id="AIO"><a class="header-anchor" href="#AIO"> </a>AIO</h4>
+<p>AIO (Asynchronous I/O)是Java I/O模型的另一种改进版。主要用于处理网络通信和文件I/O操作，在这个模型中，I/O操作不再由程序自己完成，而是由操作系统完成。当一个I/O操作完成后，操作系统会通知应用程序，以便应用程序可以执行下一步操作。相比于NIO，AIO可以处理更多的连接，并且具有更好的可伸缩性。但是，AIO使用起来更复杂，对于一些简单的应用程序可能过于复杂。</p>
 <p>在AIO模型中，当一个I/O操作完成后，会通过回调函数的方式来通知应用程序，而不需要等待I/O操作的结果返回。这样可以避免线程的阻塞，提高了系统的并发性能。</p>
 <p>NIO是半同步半异步的I/O模型，而AIO则是纯异步的I/O模型。在NIO中，读写操作仍然会阻塞线程，只有就绪事件才是异步处理的；而在AIO中，读写操作不会阻塞线程，通过回调函数的方式来实现异步处理。</p>
 
@@ -327,8 +333,8 @@
     </a>
   
   
-    <a href="/2023/06/13/%E6%91%98%E5%BD%95/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">摘录</div>
+    <a href="/2023/05/18/%E5%A4%9A%E7%BA%BF%E7%A8%8B/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">多线程</div>
       <i class="icon-circle-right"></i>
     </a>
   
