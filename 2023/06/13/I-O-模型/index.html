@@ -9,16 +9,16 @@
   <link rel="dns-prefetch" href="https://zrichard9527.github.io">
   <title>I/O 模型 | Richard&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="I&#x2F;O模型Java I&#x2F;O模型是用于描述Java程序中数据输入输出操作、Java I&#x2F;O模型提供了一组抽象类和接口，用于处理不同类型的输入、输出流和文件系统。">
+  <meta name="description" content="Java I&#x2F;O模型是用于描述Java程序中数据输入输出操作、Java I&#x2F;O模型提供了一组抽象类和接口，用于处理不同类型的输入、输出流和文件系统。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="I&#x2F;O 模型">
 <meta property="og:url" content="https://zrichard9527.github.io/2023/06/13/I-O-%E6%A8%A1%E5%9E%8B/index.html">
 <meta property="og:site_name" content="Richard&#39;s Blog">
-<meta property="og:description" content="I&#x2F;O模型Java I&#x2F;O模型是用于描述Java程序中数据输入输出操作、Java I&#x2F;O模型提供了一组抽象类和接口，用于处理不同类型的输入、输出流和文件系统。">
+<meta property="og:description" content="Java I&#x2F;O模型是用于描述Java程序中数据输入输出操作、Java I&#x2F;O模型提供了一组抽象类和接口，用于处理不同类型的输入、输出流和文件系统。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://zrichard9527.github.io/2023/06/13/I-O-%E6%A8%A1%E5%9E%8B/%22../I-O-%E6%A8%A1%E5%9E%8B/d543f1f014e64f3cbdb7fb716bb018b2.png%22">
 <meta property="article:published_time" content="2023-06-13T15:06:34.000Z">
-<meta property="article:modified_time" content="2023-07-15T06:52:09.500Z">
+<meta property="article:modified_time" content="2023-07-15T08:24:35.857Z">
 <meta property="article:author" content="Richard">
 <meta property="article:tag" content="Java">
 <meta property="article:tag" content="I&#x2F;O">
@@ -198,7 +198,9 @@
 
               
 
-              <h3 id="I-O模型"><a href="#I-O模型" class="headerlink" title="I/O模型"></a>I/O模型</h3><p>Java I/O模型是用于描述Java程序中数据输入输出操作、Java I/O模型提供了一组抽象类和接口，用于处理不同类型的输入、输出流和文件系统。</p>
+              <blockquote>
+<p>Java I/O模型是用于描述Java程序中数据输入输出操作、Java I/O模型提供了一组抽象类和接口，用于处理不同类型的输入、输出流和文件系统。</p>
+</blockquote>
 <span id="more"></span>
 
 <h3 id="I-O流"><a href="#I-O流" class="headerlink" title="I/O流"></a>I/O流</h3><h4 id="流（stream）"><a href="#流（stream）" class="headerlink" title="流（stream）"></a>流（stream）</h4><p>Java的I/O基于流（stream）的概念。流是一个抽象概念，表示一组有序的数据，可以从一个地方向另一个地方传输。输入输出的介质有文件、网络、键盘、显示器等。</p>
@@ -211,7 +213,7 @@
 <p>一般以Stream结尾的都是字节流，以Reader/Writer结尾的都是字符流</p>
 <h4 id="字节流"><a href="#字节流" class="headerlink" title="字节流"></a>字节流</h4><p>计算机系统中，一切都是字节，因此对任何文件的操作都是可以使用一个一个字节进行操作的。字节流以字节为单位进行读写，并且通常与二进制数据打交道，如图像、音频、视频等。Java提供了两个基本的字节流类：InputStream和OutputStream。</p>
 <h4 id="字符流"><a href="#字符流" class="headerlink" title="字符流"></a>字符流</h4><p>字符流以字符为单位进行读写，并且通常与文本数据打交道，如文本文件等。Java提供了两个基本的字符流类：Reader和Writer。</p>
-<h3 id="I-O模型-1"><a href="#I-O模型-1" class="headerlink" title="I/O模型"></a>I/O模型</h3><p>Java I/O模型是用于描述Java程序中数据输入输出操作、Java I/O模型提供了一组抽象类和接口，用于处理不同类型的输入、输出流和文件系统。</p>
+<h3 id="I-O模型"><a href="#I-O模型" class="headerlink" title="I/O模型"></a>I/O模型</h3><p>Java I/O模型是用于描述Java程序中数据输入输出操作、Java I/O模型提供了一组抽象类和接口，用于处理不同类型的输入、输出流和文件系统。</p>
 <h4 id="BIO"><a href="#BIO" class="headerlink" title="BIO"></a>BIO</h4><p>BIO (Blocking I/O)是Java I/O模型中最常见的模型。在这个模型中，当一个线程需要读取或写入数据时，它会一直阻塞，直到所有数据都被读取或写入完成。这种方式非常简单，但是如果需要同时处理多个客户端连接时，性能将会受到很大影响。</p>
 <p>应用程序在发出IO请求后需要一直等待系统内核完成操作，等到请求完成后线程才能执行其他操作。为了避免这种线程一直等待的情况，在数据流之间添加一个缓冲区，内核在数据准备好后先传输到缓冲区中，线程请求后不用一直等待，从缓冲区中读取数据也不用担心数据丢失。这就是接下来NIO的思想。</p>
 <h4 id="NIO"><a href="#NIO" class="headerlink" title="NIO"></a>NIO</h4><p>new io 或者non-blocking io，是Java中一种基于通道（Channel）和缓冲区（Buffer）的IO操作，它提供了与传统的流（Stream）IO 操作不同的IO处理方式。</p>
@@ -538,15 +540,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">深度学习</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">目标检测</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
