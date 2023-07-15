@@ -7,17 +7,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://zrichard9527.github.io">
-  <title>Archives: 2022/10 | Richard&#39;s Blog</title>
+  <title>Java基础知识 | Richard&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Richard&#39;s Blog">
-<meta property="og:url" content="https://zrichard9527.github.io/archives/2022/10/index.html">
+  <meta name="description" content="Java相关知识">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java基础知识">
+<meta property="og:url" content="https://zrichard9527.github.io/2023/05/14/Java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/index.html">
 <meta property="og:site_name" content="Richard&#39;s Blog">
+<meta property="og:description" content="Java相关知识">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-05-14T11:29:17.000Z">
+<meta property="article:modified_time" content="2023-07-15T06:38:02.298Z">
 <meta property="article:author" content="Richard">
-<meta property="article:tag" content="Richard&#39;s Blog">
-<meta property="article:tag" content="周锐淇">
-<meta property="article:tag" content="Richard">
+<meta property="article:tag" content="Java">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Richard&#39;s Blog" type="application/atom+xml">
@@ -73,7 +75,7 @@
 
 <!--左侧统计文章数-->
 <nav>
-	<a>总文章数 12</a>
+	<a>总文章数 11</a>
 </nav>
 
 		<nav class="header-smart-menu">
@@ -159,69 +161,288 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-Java基础知识" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2022" class="archive-year">2022</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
- <!--0626 添加代码不蒜子统计访问量-->
-
- 
-
-<a href="/2022/10/19/%E5%9B%BE%E5%83%8F%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B%E7%BB%BC%E8%BF%B0/" class="archive-article-date">
-  	<time datetime="2022-10-19T04:35:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-10-19</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/10/19/%E5%9B%BE%E5%83%8F%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B%E7%BB%BC%E8%BF%B0/">图像目标检测综述</a>
+    <h1 class="article-title" itemprop="name">
+      Java基础知识
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        
+ <!--0626 添加代码不蒜子统计访问量-->
+
+ 
+        <!-- 不蒜子统计-->
+       <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+       <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+
+
+<a href="/2023/05/14/Java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" class="archive-article-date">
+  	<time datetime="2023-05-14T11:29:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-05-14</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+            
+
+              
+
+              <blockquote>
+<p>Java相关知识</p>
+</blockquote>
+<span id="more"></span>
+
+<h5 id="抽象类"><a href="#抽象类" class="headerlink" title="抽象类"></a>抽象类</h5><p>在Java中，抽象类是一种特殊的类，它不能被实例化，只能作为基类被继承，并且必须用 abstract 关键字来修饰。</p>
+<p>抽象类的本质就是一个类模板，它提供了一些抽象的方法和属性，让子类来具体实现。抽象类不能被实例化，但是可以用来定义变量类型、创建引用对象等。相比于普通类，抽象类具有以下特点：</p>
+<ol>
+<li>抽象类不能被实例化。因为它只是一个抽象的概念，不能直接创建对象。</li>
+<li>抽象类可以包含抽象方法和非抽象方法。抽象方法是没有实现的方法，只有声明，而非抽象方法则是已经实现的方法。</li>
+<li>子类必须实现父类中的所有抽象方法。否则，子类也必须声明为抽象类。</li>
+<li>抽象类可以拥有属性和构造方法。【抽象类的构造函数主要是给子类调用以便初始化抽象类的一些属性】</li>
+</ol>
+<h5 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h5><p>在Java中，接口是一种特殊的抽象类，它定义了一个规范，但没有具体实现。接口与抽象类不同的是，接口中所有方法都是抽象的【默认为 public abstract 类型】，并且不能拥有成员变量（只能拥有常量）。接口可以被类实现，也可以被其他接口扩展。</p>
+<p>接口和抽象类本身不能实例化，但可以指向子类的实例，这是java多态的一种体现。</p>
+<h5 id="反射"><a href="#反射" class="headerlink" title="反射"></a>反射</h5><p>Java反射机制是指在运行时动态地获取类的信息并对其进行操作的能力。通过反射，可以在程序运行时获取类的全限定名、属性、方法等信息，并且可以在运行时调用类的构造器、方法或者改变属性值。</p>
+<p>Java反射机制包含以下三个核心类：Class、Constructor和Method。其中，Class类代表一个类的运行时信息，Constructor类表示类的构造器信息，Method类表示类的方法信息。</p>
+<p>使用反射机制的前提是需要获得一个类的Class对象，可以使用以下几种方式获取一个类的Class对象：</p>
+<ol>
+<li>调用某个对象的getClass()方法；</li>
+<li>使用.class语法获取；</li>
+<li>使用Class.forName()方法获取。</li>
+</ol>
+<p>一旦获取了一个类的Class对象，就可以通过它来获取该类的构造器、方法和属性等信息，并且可以在运行时调用这些方法，修改属性值，实例化对象等。</p>
+<p>Java反射机制可以使编程更加灵活，但同时也会降低程序的性能和安全性，应当慎重使用。</p>
+<h5 id="注解"><a href="#注解" class="headerlink" title="注解"></a>注解</h5><p>注解（Annotation）是Java编程语言中的一个特性，是一种元数据【Matadata，用于描述数据的数据，包括数据内容、格式、结构等信息。元数据通常是通过注解、XML配置文件、属性文件等形式来提供的，可以使得程序具有更高的可配置性，通过修改元数据来改变程序而无需修改代码】，可以用来为程序中的方法、类、变量等添加额外的信息和说明。</p>
+<h5 id="内存溢出与内存泄露"><a href="#内存溢出与内存泄露" class="headerlink" title="内存溢出与内存泄露"></a>内存溢出与内存泄露</h5><p>内存溢出（Memory Overflow）指的是程序在申请内存时，要求的内存大小超过了系统所能提供的可用内存大小，导致程序运行失败。通常情况下，内存溢出会导致程序崩溃或者异常结束，并且在操作系统中会生成一个错误报告。</p>
+<p>而内存泄露（Memory Leak）则是指程序在申请内存后，在释放该内存之前，失去了对这块内存的引用，从而导致这块内存无法被再次使用，最终可能导致系统内存逐渐耗尽，影响整个系统的正常运行。内存泄露通常不会导致程序直接崩溃，但会导致程序的性能和稳定性受到影响。</p>
+<h5 id="关键字final"><a href="#关键字final" class="headerlink" title="关键字final"></a>关键字final</h5><p>final代表最终的，不可改变。可以修饰类、方法、成员变量、局部变量。</p>
+<p>final修饰类时则此类不能再有子类。且类的方法也不能被重写</p>
+<p>final修饰方法时表示方法不能被覆盖重写</p>
+<p>所以对于类和方法来说，final与abstract不能同时使用。</p>
+<p>final修饰具备变量只能有一次赋值，可以在初始化的时候也可以在之后赋值，但是只有一次。赋值之后不可改变。对于引用类型来说，不可变说的是变量当中的地址值不可改变，所以引用类型的成员变量等是可以改变的。</p>
+<p>final修饰成员变量，也是只能一次赋值，要么声明时要么在构造函数中。没有set方法。</p>
+<h5 id="自动装箱与自动拆箱"><a href="#自动装箱与自动拆箱" class="headerlink" title="自动装箱与自动拆箱"></a>自动装箱与自动拆箱</h5><p>自动装箱：1.把基本类型的值赋给包装类；2.基本类型的值作为参数传递给需要相应包装类的方法。 Integer.valueOf（）</p>
+<p>自动拆箱：1.把包装类的值赋给基本类型数据；2.包装类作为参数传递给需要相应基本数据类型的方法。intValue（）</p>
+<h5 id="类初始化"><a href="#类初始化" class="headerlink" title="类初始化"></a>类初始化</h5><p>类的加载顺序是 <strong>静态代码块&gt;初始化属性值&gt;普通代码块&gt;构造方法</strong></p>
+<p>如果初始化一个类的时候其父类尚未初始化则优先初始化其父类</p>
+<p>构造函数也只有在调用的时候会执行，如果类中定义静态成员变量对象，会先创建对象调用构造方法。</p>
+<p>子类的构造函数会默认添加父类的空参构造函数，也可以使用super(“args”)主动调用带参构造函数。super（）必须放在构造函数的第一行，所以父类构造函数先于子类构造函数初始化。</p>
+<p>所以子类初始化时是父类static 子类static 然后 父类构造函数、子类构造函数</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//例子</span></span><br><span class="line">一个类main方法中初始一个子类，其加载顺序为</span><br><span class="line">主类静态块&gt;main方法&gt;父类静态块&gt;子类静态块&gt;父类构造函数&gt;子类构造函数</span><br></pre></td></tr></table></figure>
+
+<h5 id="控制访问"><a href="#控制访问" class="headerlink" title="控制访问"></a>控制访问</h5><p>Java使用访问权限修饰符修饰类、成员变量、成员函数、内部类以控制对其的访问权限</p>
+<p>：同类  同包  不同包子类</p>
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center">同类</th>
+<th align="center">同包</th>
+<th align="center">不同包子类</th>
+<th align="center">不同包其他类</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">public       公共权限</td>
+<td align="center">是</td>
+<td align="center">是</td>
+<td align="center">是</td>
+<td align="center">是</td>
+</tr>
+<tr>
+<td align="center">protected 保护权限</td>
+<td align="center">是</td>
+<td align="center">是</td>
+<td align="center">是</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">default      默认权限</td>
+<td align="center">是</td>
+<td align="center">是</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">private      私有权限</td>
+<td align="center">是</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+<h4 id="引用类型"><a href="#引用类型" class="headerlink" title="引用类型"></a>引用类型</h4><p>Java中基本数据类型的值直接存放在虚拟机栈中，引用类型的值则是存放在堆内存中，虚拟机栈保存指向堆内存的地址。</p>
+<p>Java中最初对引用类型的变量只分为了有引用和无引用两类，对于无引用的变量则会在GC中回收内存空间。这种方法存在缺陷，有的有引用的变量其实也是可以回收的，比如缓存的图片等。</p>
+<p>所以后来Java堆引用的概念进行了扩展，设计了四种引用类型：强引用（Strong Reference）、软引用（Soft Reference）、弱引用（Weak Reference）、虚引用（Phantom Reference）</p>
+<h5 id="强引用"><a href="#强引用" class="headerlink" title="强引用"></a>强引用</h5><p>new一个对象或数组就是一个强引用，强引用具有以下特点：</p>
+<p>1.JVM内存不足时，即使抛出OOM（out of memory）也不会回收被强引用关联的对象。</p>
+<p>2.可以直接通过引用进行访问。</p>
+<p>3.通过将强引用设置为null，可以断开强引用与对象之间的关联。</p>
+<h5 id="软引用"><a href="#软引用" class="headerlink" title="软引用"></a>软引用</h5><p>软引用关联的对象生命力较强引用更弱，在内存不足时会被回收。需要通过SoftReference创建对象的软引用。</p>
+<p>1.被软引用的对象不能直接使用，需要通过get()方法获取；</p>
+<p>2.只被软引用关联的对象在内存不足的时候会被回收。</p>
+<p>3.适用于对内存敏感的高速缓存，例如图片缓存框架中的图片缓存可以使用软引用。</p>
+<p>4.软引用可以关联一个引用队列，如果能从引用队列中poll出软引用，说明软引用关联的对象已经被回收。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//创建强引用</span></span><br><span class="line">Student student = <span class="keyword">new</span> Student(<span class="string">&quot;lucy&quot;</span>, <span class="number">25</span>);</span><br><span class="line"><span class="comment">//创建对象的软引用</span></span><br><span class="line">SoftReference&lt;Student&gt; softReference = <span class="keyword">new</span> SoftReference&lt;&gt;(student);</span><br><span class="line"><span class="comment">// 断开对象的强引用</span></span><br><span class="line">student = <span class="keyword">null</span>;</span><br><span class="line"><span class="comment">//使用</span></span><br><span class="line">String str=student.get().getName();</span><br></pre></td></tr></table></figure>
+
+<h5 id="弱引用"><a href="#弱引用" class="headerlink" title="弱引用"></a>弱引用</h5><p>弱引用关联的对象生命力比软引用更弱，无论内存是否充足，都会被回收。</p>
+<p>需要使用WeakReference创建。</p>
+<p>1.关联对象不能直接访问，需要使用get（）</p>
+<p>2.无论内存是否充足都会被回收。</p>
+<p>3.适用于对内存敏感的缓存。</p>
+<p>4.弱引用也可以关联引用队列，实现对弱引用的管理和对关联对象的监听。</p>
+<ul>
+<li>Thread中，存储&lt;ThraeadLocal, value&gt;的entry中，对<code>ThraeadLocal</code>的引用就是弱引用。</li>
+</ul>
+<h5 id="虚引用"><a href="#虚引用" class="headerlink" title="虚引用"></a>虚引用</h5><p>虚引用又叫幻影引用，对被关联的对象生命周期没有任何影响。</p>
+<p>可以使用<code>PhantomReference</code>创建虚引用。</p>
+<p>1.任何时候都可能被垃圾回收；</p>
+<p>2.不影响被关联对象的生命周期，无法通过虚引用get（）到被关联的对象。</p>
+<p>3.虚引用可以用来判断对象是否已经被回收</p>
+
+            
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">深度学习</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">目标检测</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://zrichard9527.github.io/2023/05/14/Java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2023/05/18/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          设计模式
+        
+      </div>
+    </a>
   
   
-    </div></section>
+    <a href="/2023/03/05/%E5%9B%BE%E5%83%8F%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B%E7%BB%BC%E8%BF%B0/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">图像目标检测综述</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+  <div id="SOHUCS" sid="Java基础知识" ></div> 
+<script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
+<script type="text/javascript">
+    window.changyan.api.config({
+        appid: "cyvwEGDgV",
+        conf: "7a2b35ce4ad9218ea4daedb4fc89a1a2"
+    });
+</script>
+</script>
+  
+
+  
+
+  
 
 
           </div>
@@ -262,8 +483,8 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

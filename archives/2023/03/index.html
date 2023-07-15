@@ -7,31 +7,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://zrichard9527.github.io">
-  <title>图像目标检测综述 | Richard&#39;s Blog</title>
+  <title>Archives: 2023/3 | Richard&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="摘要 图像是互联网生态的重要内容组成，对图像中目标对象进行检测识别在道路交通、图像检索、商品推荐、身份识别、军事目标检测以及医学等领域都具有重大意义。图像识别相关研究一直以来都受到研究人员的重视，相关研究，人工神经网络是图像识别领域具有里程碑意义的重要技术手段，深度卷积神经网络以其优异的特征学习能力，极大推动了目标识别检测的发展。本文回顾了神经网络在图像目标识别领域的应用与发展，介绍常见的检测模型">
-<meta property="og:type" content="article">
-<meta property="og:title" content="图像目标检测综述">
-<meta property="og:url" content="https://zrichard9527.github.io/2022/10/19/%E5%9B%BE%E5%83%8F%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B%E7%BB%BC%E8%BF%B0/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Richard&#39;s Blog">
+<meta property="og:url" content="https://zrichard9527.github.io/archives/2023/03/index.html">
 <meta property="og:site_name" content="Richard&#39;s Blog">
-<meta property="og:description" content="摘要 图像是互联网生态的重要内容组成，对图像中目标对象进行检测识别在道路交通、图像检索、商品推荐、身份识别、军事目标检测以及医学等领域都具有重大意义。图像识别相关研究一直以来都受到研究人员的重视，相关研究，人工神经网络是图像识别领域具有里程碑意义的重要技术手段，深度卷积神经网络以其优异的特征学习能力，极大推动了目标识别检测的发展。本文回顾了神经网络在图像目标识别领域的应用与发展，介绍常见的检测模型">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://zrichard9527.github.io/2022/10/19/%E5%9B%BE%E5%83%8F%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B%E7%BB%BC%E8%BF%B0/%E5%9B%BE2_1.png">
-<meta property="og:image" content="https://zrichard9527.github.io/2022/10/19/%E5%9B%BE%E5%83%8F%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B%E7%BB%BC%E8%BF%B0/%E5%9B%BE2_2.png">
-<meta property="og:image" content="https://zrichard9527.github.io/2022/10/19/%E5%9B%BE%E5%83%8F%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B%E7%BB%BC%E8%BF%B0/3-1.png">
-<meta property="og:image" content="https://zrichard9527.github.io/2022/10/19/%E5%9B%BE%E5%83%8F%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B%E7%BB%BC%E8%BF%B0/4-1.png">
-<meta property="og:image" content="https://zrichard9527.github.io/2022/10/19/%E5%9B%BE%E5%83%8F%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B%E7%BB%BC%E8%BF%B0/4-2.png">
-<meta property="og:image" content="https://zrichard9527.github.io/2022/10/19/%E5%9B%BE%E5%83%8F%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B%E7%BB%BC%E8%BF%B0/5-1.png">
-<meta property="og:image" content="https://zrichard9527.github.io/2022/10/19/%E5%9B%BE%E5%83%8F%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B%E7%BB%BC%E8%BF%B0/5-2.png">
-<meta property="og:image" content="https://zrichard9527.github.io/2022/10/19/%E5%9B%BE%E5%83%8F%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B%E7%BB%BC%E8%BF%B0/5-3.png">
-<meta property="og:image" content="https://zrichard9527.github.io/2022/10/19/%E5%9B%BE%E5%83%8F%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B%E7%BB%BC%E8%BF%B0/5-4.png">
-<meta property="article:published_time" content="2022-10-19T04:35:06.000Z">
-<meta property="article:modified_time" content="2023-06-19T06:58:37.408Z">
 <meta property="article:author" content="Richard">
-<meta property="article:tag" content="深度学习">
-<meta property="article:tag" content="目标检测">
+<meta property="article:tag" content="Richard&#39;s Blog">
+<meta property="article:tag" content="周锐淇">
+<meta property="article:tag" content="Richard">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://zrichard9527.github.io/2022/10/19/%E5%9B%BE%E5%83%8F%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B%E7%BB%BC%E8%BF%B0/%E5%9B%BE2_1.png">
   
     <link rel="alternative" href="/atom.xml" title="Richard&#39;s Blog" type="application/atom+xml">
   
@@ -86,7 +73,7 @@
 
 <!--左侧统计文章数-->
 <nav>
-	<a>总文章数 12</a>
+	<a>总文章数 11</a>
 </nav>
 
 		<nav class="header-smart-menu">
@@ -172,267 +159,41 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-图像目标检测综述" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
+            
+  
+  
     
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      图像目标检测综述
-    </h1>
-  
-
-        
-        
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2023" class="archive-year">2023</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	
  <!--0626 添加代码不蒜子统计访问量-->
 
  
-        <!-- 不蒜子统计-->
-       <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-       <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
-              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
-        </span>
 
-
-<a href="/2022/10/19/%E5%9B%BE%E5%83%8F%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B%E7%BB%BC%E8%BF%B0/" class="archive-article-date">
-  	<time datetime="2022-10-19T04:35:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-10-19</time>
+<a href="/2023/03/05/%E5%9B%BE%E5%83%8F%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B%E7%BB%BC%E8%BF%B0/" class="archive-article-date">
+  	<time datetime="2023-03-05T04:35:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-03-05</time>
 </a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-            
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2023/03/05/%E5%9B%BE%E5%83%8F%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B%E7%BB%BC%E8%BF%B0/">图像目标检测综述</a>
+    </h1>
+  
 
-              
-
-              <h1>摘要</h1>
-<p>图像是互联网生态的重要内容组成，对图像中目标对象进行检测识别在道路交通、图像检索、商品推荐、身份识别、军事目标检测以及医学等领域都具有重大意义。图像识别相关研究一直以来都受到研究人员的重视，相关研究，人工神经网络是图像识别领域具有里程碑意义的重要技术手段，深度卷积神经网络以其优异的特征学习能力，极大推动了目标识别检测的发展。本文回顾了神经网络在图像目标识别领域的应用与发展，介绍常见的检测模型、数据集以及评价指标，阐述当前图像目标识别领域存在的困难。</p>
- <span id="more"></span>
-<h1>1 引言</h1>
-<p>图像是客观事物的直接反映，图像目标检测是利用计算机技术对图像进行处理和标识、准确识别出图像所包含的不同模式目标和位置。图像识别在图像检索、商品推荐、身份识别、自动驾驶、无人机等领域都有良好的应用场景。具有广泛的研究意义，一直是研究人员的研究热点。例如，在道路交通中，交通标志是一种包含丰富的道路交通信息的道路设施，具有醒目、简洁、信息明确等特点。在当前汽车行业处于重大变革期，对交通标志的识别就有重要意义，主动识别交通标志可以帮助自动驾驶汽车在行驶过程中做出适合的决策。使用计算机对图像所包含的实例对象识别检测一度是一项非常困难的任务，然而随着神经网络相关理论与实践的不断发展，过去几十年来使用计算机对图像目标检测与识别的速度与精度都得到了极大提升。</p>
-<h1>2发展历程</h1>
-<p>人工智能可以分为三个学派，分别是联结主义、符号主义和行为主义学派。神经网络是联结主义智能实现的典范，通过对人脑思维活动模式的模仿来达到智能的目的。神经网络不断起伏发展，1943年神经元的M-P模型首次被提出，1958年，Rosenblatt等人成功研制出了代号为Mark1的感知机，之后神经网络相关研究进入冰期。直到1982年，Hopfield提出了Hopfield网络，在旅行商问题上得到当时最优解，引起轰动，神经网络模型再一次受到重视。现在，深度神经网络已经得到了广泛应用。图像目标检测领域就是神经网络一大应用重点。</p>
-<p>目标检测的相关研究起源于上个世纪末，通常被视为一个有监督的学习问题，受限于硬件资源算力有限，早期目标检测通常使用浅层神经网络模型与支持向量机(Support Vector Machine，SVM)相结合的算法，重点在于图像特征的设计，通常分为六个模块：图像处理、区域选择、特征提取、分类器、后处理、输出结果，如图2.1所示。</p>
-<p>​                          <img src="./%E5%9B%BE2_1.png" alt=""></p>
-<p>​                                              图2.1 传统目标检测流程图</p>
-<p>首先对图像进行处理，再使用滑动窗口等方法选择可能含有目标的候选框，提取候选框图像的特征，再使用SVM、AdaBoost等分类算法对提取的特征向量进行训练。通过非极大值抑制算法(Non-Maximum Suppression，NMS)筛选预测框，最终得到检测结果。代表算法模型有V-J、HoG、DPM等。</p>
-<p>传统浅层次神经网络的目标检测算法需要使用滑动窗口遍历搜索图片，计算量大且效率低。同时，非常依赖对特征的设计，具有很强的针对性，对于高层次的语义特征提取效果不理想。2012年，AlexNet在ImageNet图像分类任务中大获全胜，使得深度学习成为图像目标检测的主流，深度卷积神经网络具有优异的特征提取能力，以全体数据作为输入，使用模型自身提取图像特征，不需要再人工设计，能够表征更高维、抽象的特征，使图像目标检测的研究重心从特征设计转换到模型的设计。神经网络模型迅速发展，涌现了VGGNet、ResNet、GoogLeNet等优秀的网络模型。图像目标检测在深度学习的加持下检测速度与检测精度都得到了极大的提升。取决于是否存在候选框的生成过程，出现了以R-CNN为代表的Two Stage算法和以YOLO、SSD为代表的One Stage算法。目标检测发展历程如图2.2所示。</p>
-<p><img src="../%E5%9B%BE%E5%83%8F%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B%E7%BB%BC%E8%BF%B0/%E5%9B%BE2_2.png" alt=""></p>
-<p>​                                            图2.2 基于神经网络的目标检测发展历程</p>
-<h1>3数据集与评价指标</h1>
-<h2 id="3-1数据集"><a class="header-anchor" href="#3-1数据集"> </a>3.1数据集</h2>
-<p>算法、算力、数据是人工智能发展的三要素，神经网络模型需要不断训练才能提升输出结果的质量，数据集对于模型训练具有十分重要的意义。常见的目标检测相关数据集有PASCAL VOC、ImageNet、COCO、Open-Image等。</p>
-<p>PASCAL VOC 是一个比较早的图像数据集，PASCAL VOC 07包含常见的20类物体，图像数量在一万左右，每张图像中均包括多个目标实例，图像接近真实世界。PASCAL VOC 12是PASCAL VOC 07的升级版，数据量翻倍，标记了更多的实例对象。</p>
-<p>ImageNet是ILSVRC挑战赛的数据集，其中和目标检测相关的数据集包含200类目标对象，50万幅图像。ImageNet是目前世界上最大的数据集。</p>
-<p>COCO17有80个类别，16万幅图像，每幅图像都包含更多的目标，同时包含更多的小目标对象，目标分布更加接近现实世界，COCO数据集已经成为目标检测领域的基准数据集。</p>
-<p>Open Image是OID挑战赛的数据集，针对目标检测任务有600个物体类别以及191万幅图像，是目前最大的目标定位数据集。</p>
-<h2 id="3-2评价指标"><a class="header-anchor" href="#3-2评价指标"> </a>3.2评价指标</h2>
-<p>目标检测算法主要有以下的评价指标：</p>
-<p>Frame Per Second，指的是算法每秒可以处理的图像帧数，用来评价算法的检测速率，FPS越大算法实时性越好，但是检测速率过快也会对计算造成负担，需要与算力、检测精度相平衡。</p>
-<p>Intersection over Union，在目标检测中指的是两个边界框A和B之间的交集与并集之比，可以反映算法目标定位的检测精度，IoU=(A∩B)/(A∪B)。如图3.1所示。</p>
-<p><img src="3-1.png" alt=""></p>
-<p>图3.1 IoU示意图</p>
-<p>除此之外，还有准确率(Accuracy)：判断正确的样本占所有样本的比例、查全率(Recall)：正样本中有多少是被正确地找出来的、精确度(Precision)：就是在全部positive预测中，正确预测结果占的比例、平均精确度(Average Precision，AP)、平均精确度均值(mean Average Precision，mAP)等，其中mAP是目标检测模型检测精度最直观的表现。实际应用中，通常结合检测速度FPS与平均精确度均值mAP来评估算法的性能。</p>
-<h1>4 人工特征目标检测</h1>
-<h2 id="4-1-Haar特征"><a class="header-anchor" href="#4-1-Haar特征"> </a>4.1 Haar特征</h2>
-<p>1998年，研究者首次提出了一种目标检测的通用处理框架，提取图像的Haar特征，使用SVM对特征分类学习。SVM是一种线性分类器，通过寻求两类样本之间的最佳超平面来区分样本，对于线性不可分的样本需要选择一个核函数将样本映射高维线性可分的数据。Haar特征可以反映图像灰度变化，是一种使用像素分模块求差值的特征，可以分为边缘特征、线性特征、中心特征与对角线特征。使用由黑白两种矩形组成特征模板来计算特征值，具体计算过程为：在特征模板内用黑色矩形对应的像素值之和减去白色矩形对应的像素值之和，通过改变特征模板的大小和位置就可以计算得到大量的特征来表示图像。矩形特征只对边缘、线段等简单的图形结构敏感，Haar特征更适合人脸检测以及行人检测。Haar特征模板如图4.1所示，特征模板可以旋转。</p>
-<p><img src="4-1.png" alt=""></p>
-<p>(a)边缘特征   (b)线性特征     ©中心特征   (d)对角线特征</p>
-<p>图4.1Haar特征模板</p>
-<p>目标检测技术进一步发展，Viola等人提出了Viola-Jones算法，这是一种能对人脸图像实时检测的算法，标志着人脸检测进入实际应用阶段。首先使用滑动窗口选择可能存在目标的区域，计算区域的Haar特征，通过积分图进行特征选择提升效率，基于AdaBoost算法使用级联分类器减少计算量。积分图能够加速计算过程，减少重复计算。AdaBoost是一种基于Boosting的算法，核心思想是通过训练得到多个弱分类器，根据分类器的性能分配权值，集合成一个具有更高准确率的强分类器。Viola-Jones算法在同等精度下速度得到了极大提升，第一次做到了实时人脸检测效果。</p>
-<h2 id="4-2-SIFT特征"><a class="header-anchor" href="#4-2-SIFT特征"> </a>4.2 SIFT特征</h2>
-<p>1999年David Lowe提出了尺度不变特征变换算法(Scale-Invariant Feature Transform，SIFT)，并在2004年加以完善，现在已经成为数字图像的一种重要特征描述，应用非常广泛。SIFT特征对旋转、缩放、光线变化保持不变，对角度偏移、图像噪声等具有鲁棒性。SIFT特征点的获取需要经过一系列计算：将图像构造成不同的分辨率，对其高斯模糊处理，再将同一分辨率下相邻的高斯模糊图相减得到高斯差分图(Difference of Gaussian，DoG)，DoG的极值点则对应不同尺度下的特征点，将特征点映射回原图对应区域，得到所有特征点之后筛选稳定、抗噪能力强的关键点，利用直方图统计的方法获取描述符。SIFT存在着复杂度高、检测速度慢以及对模糊图像提取有效特征点困难等问题。</p>
-<p><img src="4-2.png" alt=""></p>
-<p>图4.2 高斯差分金字塔图</p>
-<p>对于SIFT存在的问题，Ke等人在SIFT的基础上引入主成分分析(Principal Components Analysis，PCA)方法，取代直方图，提出了PCA-SIFT，提高了匹配效率与检测速度但是在精度上有所下降。</p>
-<p>加速稳健特征算法(Speeded-Up Robust Features ，SURF)则是使用盒式(box)滤波器代替高斯滤波器，进一步简化计算过程，同时通过构建Hessian矩阵，获取关键点，减少降采样过程，快速构建尺度金字塔，相比SIFT精度基本不变但速度更优。</p>
-<h2 id="4-3-HOG特征"><a class="header-anchor" href="#4-3-HOG特征"> </a>4.3 HOG特征</h2>
-<p>2005年，Dalal等人设计了方向梯度直方图(Histogram of Oriented Gradient， HOG)特征，物体边缘通常会有明显的梯度变化，HOG通过计算图像局部区域的梯度信息并统计梯度信息直方图来构成特征向量。这样使用梯度信息来描述图像局部区域物体也达到了不错的效果。</p>
-<p>之后，Felzenszwalb提出了DPM (Deformable Part Model) 算法，使用多种优秀的特征设计结合HOG 和SVM进行联合训练，目前DPM已成为众多分类、分割、姿态估计等算法的核心部分，是传统机器学习目标检测算法的集大成之作。</p>
-<h2 id="4-4小结"><a class="header-anchor" href="#4-4小结"> </a>4.4小结</h2>
-<p>传统浅层次神经网络模型的目标检测算法存在着明显的缺陷：首先需要使用滑动窗口来遍历整个图像会带来大量无用的边框，计算繁重效率低下；依赖对特征的设计，特征设计越来越复杂，且针对性明显，得到的特征往往不具有鲁棒性，只对某些场景表现良好。同时，人工选择的特征基本都是低层次的，对高层次的特征难以设计；SVM等分类器的效果并不明显，耗费时间，不利于实际应用。</p>
-<h1>5深度学习目标检测</h1>
-<p>浅层神经网络结构模型不断完善，手工提取特征的检测算法的性能逐渐饱和，目标检测也遇到发展瓶颈。2006年Hinton等人提出了深度学习的概念，但受限于硬件资源算力的制约，没有大规模运用。直到2012年，AlexNet以巨大领先优势取得ImageNet图像分类任务的冠军，使得深度卷积神经网络再次受到人们重视，深层次神经网络模型优异的表征能力能够识别图像中高层次的语义特征，运用到目标检测领域，使得目标检测迅速向前发展。卷积神经网络是一种深层前馈网络，主要包含输入层、卷积层、池化层、全连接层以及输出层等。为了使输出更加准确，特征提取更加丰富，通常网络模型中使用多卷积层和多池化层相结合的网络模型，典型的代表有VGGNet、ResNet和GoogLeNet等。</p>
-<p>取决于是否存在候选框的生成过程，当前深度学习在目标检测领域主要有两大类方向，一种是将目标检测分为分类问题与回归问题的Two Stage方法，先使用滑动窗口产生一系列候选框，筛除候选框中大部分负样本，二次修正回归得到检测结果。其代表算法为R-CNN；一种是直接将目标检测转换为回归问题的One Stage方法，其代表算法是YOLO系列、SSD等。</p>
-<h2 id="5-1-Two-Stage"><a class="header-anchor" href="#5-1-Two-Stage"> </a>5.1 Two Stage</h2>
-<h3 id="5-1-1-R-CNN"><a class="header-anchor" href="#5-1-1-R-CNN"> </a>5.1.1 R-CNN</h3>
-<p>OverFeat是目标检测领域最早应用的深度学习算法之一，通过多尺度的滑动窗口结合AlexNet提取图像特征。OverFeat模型提出不久后，2014年Ross Girshick等人沿用OverFeat的思路，提出了R-CNN(Region with CNN)模型。R-CNN是深度学习进行目标检测的里程碑式算法，它使用与类无关的区域提议模块（Region Proposal）和CNN一起将检测任务转换为分类和定位问题。该算法主要包含3个部分：①使用选择性搜索方法（Selective Search）在输入图像上提取2000个候选区域；②候选区域经过裁剪归一化送入CNN产生固定长度的特征向量；③使用AlexNet作为检测器的主干架构，将提取的特征向量传送到经过训练的线性分类器SVM，为每个区域产生分数，同时利用IoU(Intersection over Union)计算和NMS来排除那些重叠位置的区域。R-CNN算法流程如图5.1所示。</p>
-<p><img src="5-1.png" alt=""></p>
-<p>图5.1 R-CNN模型目标检测流程图</p>
-<p>R-CNN的检测效果相比OverFeat大大提升，在 ILSVRC 2013 数据集上从 OverFeat的24.3%提升至31.4%。在VOC2013数据集上也取得了53.3%的mAP。R-CNN虽然精度大幅提升，但是也存在着明显的缺陷。一方面，需要对近2000个候选区域分别做特征提取，且候选区域之间存在大量的重复区域，这就会导致计算上的冗余低效。同时，每一步的数据都要存入磁盘中，占据大量空间。</p>
-<h3 id="5-1-2-SPP-Net"><a class="header-anchor" href="#5-1-2-SPP-Net"> </a>5.1.2 SPP-Net</h3>
-<p>针对R-CNN对所有候选区域分别提取特征的问题，2015年He等人提出了SPP-Net模型，一次性对整张图像做卷积操作提取特征，避免了R-CNN中的重复计算。同时，在最后一个卷积层之后、全连接层之前添加空间金字塔池化层(Spatial Pyramid Pooling，SPP)提取固定尺寸的特征向量，而不是在提取特征之前对候选区域进行归一化的操作，进一步提高了检测速度。并且，SPP-Net可以处理任意尺寸的图像，不需要对输入图像进行裁剪和扭曲，避免了图像几何失真与图像残缺。SPP-Net的精度与R-CNN相当，速度却快了24-102倍。SPP-Net的缺点是多级管道训练、存储空间大、计算成本高，仍可以进一步改进。SPP-Net网络模型如图5.2所示。</p>
-<p><img src="5-2.png" alt=""></p>
-<p>图5.2 SPP-Net结构图</p>
-<h3 id="5-1-3-Fast-R-CNN"><a class="header-anchor" href="#5-1-3-Fast-R-CNN"> </a>5.1.3 Fast R-CNN</h3>
-<p>2015年，Girshick 等人提出了Fast R-CNN模型，将SPP-Net中的SPP层简化成RoI(Regions of Interest)池化层，在一张图上完成Selective Search后得到候选框在特征图上的映射。使用Softmax代替SVM分类器，所有特征存储在显存中，减少磁盘占用。使用一个单段训练算法将分类和Bounding Box回归联合在CNN阶段训练，在全连接层引入了截断奇异值分解 SVD(Singular Value Decomposition)， 将大的全连接层压缩，从而减少在全连接层计算前向传播的时间。采用VGG16替代AlexNet，速度和精度进一步提升。Fast R-CNN的网络结构图如图5.3所示。</p>
-<p><img src="5-3.png" alt=""></p>
-<p>图5.3 fast R-CNN结构图</p>
-<h3 id="5-1-4-Faster-R-CNN"><a class="header-anchor" href="#5-1-4-Faster-R-CNN"> </a>5.1.4 Faster R-CNN</h3>
-<p>Fast R-CNN在之前基础上更进一步，但仍然使用Selective Search生成区域建议。为了解决这一问题，Faster R-CNN使用区域候选网络(Region Proposal Network，RPN)替代Selective Search，同时预测候选框的分类得分和回归偏移，实现端到端的计算，大大加快了模型速度。在RPN中引入anchor，通过在anchor上使用多个尺度和多个宽高比来定义边界框，然后对它们进行回归以便定位对象。通过和检测阶段共享全局图像卷积特征，Faster R-CNN将RPN和Fast R-CNN融合成一个统一的网络，把特征提取、候选区域生成、分类以及定位等操作被集成到了一个学习框架中。Faster R-CNN的网络结构图如图5.4所示。</p>
-<p><img src="5-4.png" alt=""></p>
-<p>图5.4 Faster R-CNN结构图</p>
-<h3 id="5-1-5-Mask-R-CNN"><a class="header-anchor" href="#5-1-5-Mask-R-CNN"> </a>5.1.5 Mask R-CNN</h3>
-<p>2017年He等人提出了Mask R-CNN，增加一个与现有的边界框回归和分类并行的mask分支来扩展 Faster R-CNN，并将3个分支的损失联合起来训练。同时使用RoIAlign取消量化操作，实现像素级对齐，改进了RoI Pooling引入的误差。Mask R-CNN在检测精度和实例分割方面都达到了非常高的水平。</p>
-<h3 id="5-1-6小结"><a class="header-anchor" href="#5-1-6小结"> </a>5.1.6小结</h3>
-<p>双阶段目标检测一开始的关注点集中在分类问题上，从R-CNN开始采用“Region Proposal+CNN feature+SVM”的思路， 使用了级联结构结合深度卷积神经网络， 大大提高了检测的精度。后续的 SPP-Net、Fast R-CNN、Faster R-CNN等大都沿用了这一思路， 在检测效率上进行改进， 但它们速度最多达到5 fps， 就时效性而言略有不足。 表1总结了基于候选区域的检测算法的性能以及优缺点。Two Stage的相关性能指标如表1所示。</p>
-<p>表1 Two Stage算法性能比较</p>
-<table>
-<thead>
-<tr>
-<th>模型</th>
-<th>主干网络</th>
-<th>数据集</th>
-<th>FPS</th>
-<th>mAP（%）</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>R-CNN</td>
-<td>AlexNet</td>
-<td>VOC2007</td>
-<td>0.03</td>
-<td>58.5</td>
-</tr>
-<tr>
-<td>SPP-Net</td>
-<td>ZF-5</td>
-<td>VOC2007</td>
-<td>2</td>
-<td>59.2</td>
-</tr>
-<tr>
-<td>Fast R-CNN</td>
-<td>VGG-16</td>
-<td>VOC2007</td>
-<td>3</td>
-<td>70.0</td>
-</tr>
-<tr>
-<td>Faster R-CNN</td>
-<td>VGG-16</td>
-<td>VOC2007</td>
-<td>5</td>
-<td>73.2</td>
-</tr>
-<tr>
-<td>Mask R-CNN</td>
-<td>ResNeXt-101</td>
-<td>VOC2007</td>
-<td>11</td>
-<td>78.2</td>
-</tr>
-</tbody>
-</table>
-<h2 id="5-2-One-Stage"><a class="header-anchor" href="#5-2-One-Stage"> </a>5.2 One Stage</h2>
-<p>One stage的目标检测算法将问题统一为一个回归问题，不再生成需要大量计算的候选框。</p>
-<h3 id="5-2-1-YOLO"><a class="header-anchor" href="#5-2-1-YOLO"> </a>5.2.1 YOLO</h3>
-<p>典型的算法有YOLO系列，YOLO的核心思想是以整张图作为网络的输入，直接在一个网络中回归Bounding Box的位置和所属种类。检测时，首先将输入图像分成SxS个网格区域，一个网格预测K个Bounding Box，每个Bounding Box的预测信息除了自身位置之外还需要附带置信度得分。预测信息包括5个部分：Bounding Box的中心坐标x、y，框的大小信息w、h，置信度得分confidence。其中confidence包含是否含有目标以及预测准确度两部分信息。YOLO使用单元格为中心的多尺度区域取代region proposal，同时采用GoogLeNet作为主架构使用较小的卷积网络的级联模块，大幅提升了检测速度，可以达到45f/s，规模较小的Fast YOLO可以达到155f/s。YOLO也存在着一些需要解决的问题，对小目标和密集对象样本表现效果不佳，同一类目标出现不常见的长宽比时泛化能力偏弱。</p>
-<h3 id="5-2-2-YOLOv2"><a class="header-anchor" href="#5-2-2-YOLOv2"> </a>5.2.2 YOLOv2</h3>
-<p>YOLOv2在YOLO的基础上，从预测更精准、识别对象更多等方面进行改进，能够识别9000个对象类，因此又称为YOLO9000。YOLOv2的主干网络使用Darknet-19，去掉完全连接层以提高速度，使用anchor机制提供提高召回率，同时为了提升性能采取了一些其他措施。比如：在每一个卷积层后添加批处理标准化(batch normalization)、多尺度训练、加入K-mean维度聚类等方式。</p>
-<h3 id="5-2-3-YOLOv3"><a class="header-anchor" href="#5-2-3-YOLOv3"> </a>5.2.3 YOLOv3</h3>
-<p>YOLOv3主要变化是使用了Darknet-53，使用二元交叉熵分类器取代Softmax层。YOLO的初始作者Joseph Redmon在YOLOv3之后退出相关研究，但是YOLO系列一直在发展。</p>
-<h3 id="5-2-4-YOLO其他系列"><a class="header-anchor" href="#5-2-4-YOLO其他系列"> </a>5.2.4 YOLO其他系列</h3>
-<p>YOLOv4结合许多技术并加以组合创新，使得精度和速度都有所提升。借鉴了跨阶段局部网络(Cross Stage Partial Networks，CSPNet)采用CSPDarkNet-53作为主干网络，优化了梯度信息重复的问题，将梯度变化集成到特征图中，减少了模型参数量，在保证推理速度和准确率的同时减小了模型规模。其他技术点还有：使用Mosiac数据增强方法，使用自对抗训练改进训练，使用交叉小批量归一化(cross mini-batch normalization，CmBN)、类标签平滑、SPP-Block、PAN(Path Aggregation Network)、多输入加权残差连接((multi-input weighted residual connections，MiWRC)等等。一系列的技术融合创新，使得YOLOv4速度和精度都得到大幅提升。YOLOv5与YOLOv4性能相似，主要引入了自适应anchor，每次训练时自适应的计算不同训练集的最佳anchor值。自适应图片缩放，对原始图像缩放时添加最少的黑边，减少信息冗余。</p>
-<p>到目前为止，YOLO系列已经更新到v8版本。</p>
-<h3 id="5-2-5-SSD"><a class="header-anchor" href="#5-2-5-SSD"> </a>5.2.5 SSD</h3>
-<p>SSD(single shot multibox detector)结合了Faster R-CNN与YOLO的优点，是第一个在保持实时检测速度时能与Two stage目标检测算法精度相匹配的算法。SSD的主干网络使用VGG16，同时增加了辅助结构来提高性能。SSD采用多尺度特征图用于检测，因为不同层的特征图具有对应大小的感受野，特定层的特征图只需要训练对应尺度的对象检测，大尺度特征图检测小目标，小尺度特征图检测大目标。SSD使用卷积层代替全连接层对不同特征提取结果，并且借鉴了Faster R-CNN中anchor box的理念，将特征图切分为一个个格子单元，对于每一个格子，设置的一系列固定大小的anchor box，预测的Bounding Box是以这些先验框为基准的，提高检测效率。SSD检测速度和精度都非常优秀，但是也存在一些问题：小目标无法得到充分训练，因此SSD对小目标的检测依旧不理想；不同层的特征图都作为分类网络的独立输入导致一个物体被不同大小的框重复计算。</p>
-<h3 id="5-2-6-RetinaNet"><a class="header-anchor" href="#5-2-6-RetinaNet"> </a>5.2.6 RetinaNet</h3>
-<p>Lin等人综合考虑one stage 与two stage的差异后，认为正负样本之间的不平衡限制，提出重构的交叉熵损失，并在RetinaNet模型上证明了该损失函数的有效性。使用加了FPN的ResNet作为主干网络，通过对输入图像的位置、比例和纵横比进行密集采样来预测物体。RetinaNet结构简单收敛速度快。</p>
-<h3 id="5-2-7小结"><a class="header-anchor" href="#5-2-7小结"> </a>5.2.7小结</h3>
-<p>One Stage算法结构简单，计算高效，虽然精度相较Two Stage略差但是速度得到了极大提升。One Stage算法相关性能指标如表2所示。</p>
-<p>表2 One Stage算法性能比较</p>
-<table>
-<thead>
-<tr>
-<th>模型</th>
-<th>主干网络</th>
-<th>数据集</th>
-<th>FPS</th>
-<th>mAP（%）</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>YOLO</td>
-<td>VGG-16</td>
-<td>VOC2012</td>
-<td>45</td>
-<td>57.9</td>
-</tr>
-<tr>
-<td>YOLOv2</td>
-<td>Darknet-19</td>
-<td>VOC2012</td>
-<td>40</td>
-<td>73.5</td>
-</tr>
-<tr>
-<td>YOLOv3</td>
-<td>Darknet-53</td>
-<td>VOC2012</td>
-<td>51</td>
-<td>57.9</td>
-</tr>
-<tr>
-<td>YOLOv4</td>
-<td>CSPDarknet-19</td>
-<td>VOC2012</td>
-<td>23</td>
-<td>43.5</td>
-</tr>
-<tr>
-<td>SSD</td>
-<td>VGG-16</td>
-<td>VOC2012</td>
-<td>19.3</td>
-<td>78.5</td>
-</tr>
-<tr>
-<td>RetinaNet</td>
-<td>ResNeXt-101</td>
-<td>VOC2012</td>
-<td>5.4</td>
-<td>40.8</td>
-</tr>
-</tbody>
-</table>
-<h1>6 总结</h1>
-<p>神经网络在实现类脑智能方面已经取得巨大的成功，其在图像目标检测领域大放异彩。深层神经网络凭借优异的表征能力，更是使得图像目标检测深度与准确度得到极大提升。</p>
-<p>但是目前的图像目标检测仍然存在一些需要突破的问题。比如面对小目标的检测、对重叠目标的检测、待检测目标信息缺失时检测精度仍不够理想。</p>
-<p>同时，深度学习也存在可解释性差的关键问题，模型的识别能力来源于训练经验，对中间过程缺少明确的解释，更像是一个黑盒。</p>
-<h1>参考文献</h1>
-<p>[1] Burges CJC. A tutorial on support vector machines for pattern recognition. Data Mining and Knowledge Discovery,1998, 2(2): 121–167.</p>
-<p>[2]Neubeck A, Van Gool L. Efficient non-maximum suppression. 18th International Conference on Pattern Recognition (ICPR’06). Hong Kong: IEEE, 2006. 850–855.</p>
-<p>[3]Redmon J, Divvala S, Girshick R, et al. You only look once:Unified, real-time object detection. Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition. Las Vegas: IEEE, 2016. 779–788</p>
-<p>[4] 毛健,赵红东,姚婧婧. 人工神经网络的发展及应用[J]. 电子设计工程,2011,19(24):62-65.</p>
-<p>[5] 董惠雯,张戈,项绪鹏. 人工智能概述[J]. 科技风,2016(5):34.</p>
-<p>[6] 戚玲珑,高建瓴. 基于改进YOLOv7的小目标检测[J]. 计算机工程,2023,49(1):41-48. DOI:10.19678/j.issn.1000-3428.0065942.</p>
-<p>[7] 葛轶洲,刘恒,王言,等. 小样本困境下的深度学习图像识别综述[J]. 软件学报,2022,33(1):193-210.</p>
-<p>[8] 周飞燕,金林鹏,董军. 卷积神经网络研究综述[J]. 计算机学报,2017,40(6):1229-1251.</p>
-<p>[9] 张顺,龚怡宏,王进军. 深度卷积神经网络的发展及其在计算机视觉领域的应用[J]. 计算机学报,2019,42(3):453-482.</p>
-<p>[10] 付苗苗,邓淼磊,张德贤. 深度神经网络图像目标检测算法综述[J]. 计算机系统应用,2022,31(7):35-45.</p>
-<p>[11] 郑远攀,李广阳,李晔. 深度学习在图像识别中的应用研究综述[J]. 计算机工程与应用,2019,55(12):20-36. DOI:10.3778/j.issn.1002-8331.1903-0031.</p>
-<p>[12] 李旭冬,叶茂,李涛. 基于卷积神经网络的目标检测研究综述[J]. 计算机应用研究,2017,34(10):2881-2886,2891. DOI:10.3969/j.issn.1001-3695.2017.10.001.</p>
-<p>[13] 方路平,何杭江,周国民. 目标检测算法研究综述[J]. 计算机工程与应用,2018,54(13):11-18,33. DOI:10.3778/j.issn.1002-8331.1804-0167.</p>
-<p>[14] 许德刚,王露,李凡. 深度学习的典型目标检测算法研究综述[J]. 计算机工程与应用,2021,57(8):10-25. DOI:10.3778/j.issn.1002-8331.2012-0449.</p>
-<p>[15]毛航天. 人工智能中智能概念的发展研究[D].华东师范大学,2016.</p>
-<p>[16]焦李成,杨淑媛,刘芳,王士刚,冯志玺.神经网络七十年:回顾与展望[J].计算机学报,2016,39(08):1697-1716.</p>
-<p>[17] 谢富，朱定局. 深度学习目标检测方法综述[J]. 计算机系统应用，2022，31(2):1-12.</p>
-<p>[18] 王小伟. 基于深度学习的交通标识检测及识别方法研究[D]. 北京:北京工业大学，2020.</p>
-<p>[19] 衡晓. SSD算法在交通标识识别中的研究与实现[D]. 江苏:南京理工大学，2020.</p>
-<p>[20] 田煜衡，闫凯龙. 基于深度学习的目标识别技术分析[J]. 集成电路应用，2022，39(7):122-123.</p>
-<p>[21] 易礼智. 深度学习在智能小车多目标识别中的应用[J]. 现代工业经济和信息化，2022，12(5):24-25，58.</p>
-<p>[22] 何锐波，狄岚，梁久祯. 一种改进的深度学习的道路交通标识识别算法[J]. 智能系统学报，2020，15(6):1121-1130.</p>
-<p>[23] 杜明宇. 自动驾驶综述[J]. 中国科技纵横，2018(6):215-216.</p>
-
-            
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -448,125 +209,19 @@
 		</ul>
 	</div>
 
-      
+          
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://zrichard9527.github.io/2022/10/19/%E5%9B%BE%E5%83%8F%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B%E7%BB%BC%E8%BF%B0/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2023/05/14/Java%E8%AF%AD%E6%B3%95%E7%9F%A5%E8%AF%86/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Java语法知识
-        
-      </div>
-    </a>
   
   
-    <a href="/2022/06/13/%E6%91%98%E5%BD%95/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">摘录</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-  
+    </div></section>
   
 
-  
-  <div id="SOHUCS" sid="图像目标检测综述" ></div> 
-<script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
-<script type="text/javascript">
-    window.changyan.api.config({
-        appid: "cyvwEGDgV",
-        conf: "7a2b35ce4ad9218ea4daedb4fc89a1a2"
-    });
-</script>
-</script>
-  
-
-  
-
-  
+    
 
 
           </div>
@@ -607,8 +262,8 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: true,
-		isArchive: false,
+		isPost: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
