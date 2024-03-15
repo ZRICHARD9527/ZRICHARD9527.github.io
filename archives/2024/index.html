@@ -7,23 +7,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://zrichard9527.github.io">
-  <title>I/O 模型 | Richard&#39;s Blog</title>
+  <title>Archives: 2024 | Richard&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Java I&#x2F;O模型是用于描述Java程序中数据输入输出操作、Java I&#x2F;O模型提供了一组抽象类和接口，用于处理不同类型的输入、输出流和文件系统。">
-<meta property="og:type" content="article">
-<meta property="og:title" content="I&#x2F;O 模型">
-<meta property="og:url" content="https://zrichard9527.github.io/2023/06/13/I-O-%E6%A8%A1%E5%9E%8B/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Richard&#39;s Blog">
+<meta property="og:url" content="https://zrichard9527.github.io/archives/2024/index.html">
 <meta property="og:site_name" content="Richard&#39;s Blog">
-<meta property="og:description" content="Java I&#x2F;O模型是用于描述Java程序中数据输入输出操作、Java I&#x2F;O模型提供了一组抽象类和接口，用于处理不同类型的输入、输出流和文件系统。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://zrichard9527.github.io/2023/06/13/I-O-%E6%A8%A1%E5%9E%8B/%22../I-O-%E6%A8%A1%E5%9E%8B/d543f1f014e64f3cbdb7fb716bb018b2.png%22">
-<meta property="article:published_time" content="2023-06-13T15:06:34.000Z">
-<meta property="article:modified_time" content="2023-07-15T08:24:35.857Z">
 <meta property="article:author" content="Richard">
-<meta property="article:tag" content="Java">
-<meta property="article:tag" content="I&#x2F;O">
+<meta property="article:tag" content="Richard&#39;s Blog">
+<meta property="article:tag" content="周锐淇">
+<meta property="article:tag" content="Richard">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://zrichard9527.github.io/2023/06/13/I-O-%E6%A8%A1%E5%9E%8B/%22../I-O-%E6%A8%A1%E5%9E%8B/d543f1f014e64f3cbdb7fb716bb018b2.png%22">
   
     <link rel="alternative" href="/atom.xml" title="Richard&#39;s Blog" type="application/atom+xml">
   
@@ -164,227 +159,54 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-I-O-模型" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
+            
+  
+  
     
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      I/O 模型
-    </h1>
-  
-
-        
-        
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2024" class="archive-year">2024</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	
  <!--0626 添加代码不蒜子统计访问量-->
 
  
-        <!-- 不蒜子统计-->
-       <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-       <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
-              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
-        </span>
 
-
-<a href="/2023/06/13/I-O-%E6%A8%A1%E5%9E%8B/" class="archive-article-date">
-  	<time datetime="2023-06-13T15:06:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-06-13</time>
+<a href="/2024/03/15/%E5%85%AB%E8%BE%BE%E7%8B%97%E8%83%9C%E8%B4%9F%E6%A6%9C/" class="archive-article-date">
+  	<time datetime="2024-03-15T07:03:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2024-03-15</time>
 </a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-            
-
-              
-
-              <blockquote>
-<p>Java I/O模型是用于描述Java程序中数据输入输出操作、Java I/O模型提供了一组抽象类和接口，用于处理不同类型的输入、输出流和文件系统。</p>
-</blockquote>
-<span id="more"></span>
-
-<h3 id="I-O流"><a href="#I-O流" class="headerlink" title="I/O流"></a>I/O流</h3><h4 id="流（stream）"><a href="#流（stream）" class="headerlink" title="流（stream）"></a>流（stream）</h4><p>Java的I/O基于流（stream）的概念。流是一个抽象概念，表示一组有序的数据，可以从一个地方向另一个地方传输。输入输出的介质有文件、网络、键盘、显示器等。</p>
-<h4 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h4><p>按流向分【输入输出都是从程序角度】：输入流（Input）、输出流（Output）</p>
-<p>按处理类型分：字节流（byte）、字符流（char）</p>
-<p>按功能分：节点流（直接和输入输出源交互），处理流（对其他流包装的流，包装流）</p>
-<p><img src="%22../I-O-%E6%A8%A1%E5%9E%8B/d543f1f014e64f3cbdb7fb716bb018b2.png%22" alt="在这里插入图片描述"></p>
-<p>流的种类繁多，但是几乎所有流都是从四个基本流继承而来</p>
-<p>InputStream、OutputStream、Reader、Writer</p>
-<p>一般以Stream结尾的都是字节流，以Reader/Writer结尾的都是字符流</p>
-<h4 id="字节流"><a href="#字节流" class="headerlink" title="字节流"></a>字节流</h4><p>计算机系统中，一切都是字节，因此对任何文件的操作都是可以使用一个一个字节进行操作的。字节流以字节为单位进行读写，并且通常与二进制数据打交道，如图像、音频、视频等。Java提供了两个基本的字节流类：InputStream和OutputStream。</p>
-<h4 id="字符流"><a href="#字符流" class="headerlink" title="字符流"></a>字符流</h4><p>字符流以字符为单位进行读写，并且通常与文本数据打交道，如文本文件等。Java提供了两个基本的字符流类：Reader和Writer。</p>
-<h3 id="I-O模型"><a href="#I-O模型" class="headerlink" title="I/O模型"></a>I/O模型</h3><p>Java I/O模型是用于描述Java程序中数据输入输出操作、Java I/O模型提供了一组抽象类和接口，用于处理不同类型的输入、输出流和文件系统。</p>
-<h4 id="BIO"><a href="#BIO" class="headerlink" title="BIO"></a>BIO</h4><p>BIO (Blocking I/O)是Java I/O模型中最常见的模型。在这个模型中，当一个线程需要读取或写入数据时，它会一直阻塞，直到所有数据都被读取或写入完成。这种方式非常简单，但是如果需要同时处理多个客户端连接时，性能将会受到很大影响。</p>
-<p>应用程序在发出IO请求后需要一直等待系统内核完成操作，等到请求完成后线程才能执行其他操作。为了避免这种线程一直等待的情况，在数据流之间添加一个缓冲区，内核在数据准备好后先传输到缓冲区中，线程请求后不用一直等待，从缓冲区中读取数据也不用担心数据丢失。这就是接下来NIO的思想。</p>
-<h4 id="NIO"><a href="#NIO" class="headerlink" title="NIO"></a>NIO</h4><p>new io 或者non-blocking io，是Java中一种基于通道（Channel）和缓冲区（Buffer）的IO操作，它提供了与传统的流（Stream）IO 操作不同的IO处理方式。</p>
-<blockquote>
-<p>Channel是一种抽象的数据传输通道，用于在缓冲区buffer和实体之间进行数据传输。</p>
-<p>Channel 相当于一个双向管道，可以通过它来读取和写入数据，使用 Channel 进行数据传输时，需要先创建一个缓冲区（Buffer），然后将数据从 Channel 写入缓冲区或从缓冲区读取数据到 Channel 中。这样可以避免直接对底层系统的 I/O 操作，提高了程序的性能和可靠性。Java NIO 提供了多个 Channel 接口的实现类，包括了 FileChannel、SocketChannel、ServerSocketChannel 和 DatagramChannel 等。</p>
-<h6 id="NIO-的通道类似于流，但有些区别如下："><a href="#NIO-的通道类似于流，但有些区别如下：" class="headerlink" title="NIO 的通道类似于流，但有些区别如下："></a>NIO 的通道类似于流，但有些<strong>区别</strong>如下：</h6><ul>
-<li>通道可以同时进行读写，而流只能读或者只能写</li>
-<li>通道可以实现异步读写数据</li>
-<li>通道可以从缓冲读数据，也可以写数据到缓冲:</li>
-</ul>
-</blockquote>
-<p>NIO 的主要特点是非阻塞式的 IO 处理。在传统的 IO 模型中，当一个线程执行读写操作时，如果数据没有到达或发送完，线程会一直等待，这就是阻塞式 IO。而 NIO 允许线程在没有数据可读写时立即返回，从而释放 CPU 资源，提高系统的并发能力。</p>
-<p>NIO 通过 Channel 和 Buffer 来分离输入和输出，数据需要先读入到缓冲区中，然后再从缓冲区写出来，这样可以灵活地控制数据的传输，这也是 NIO 的另一个优势</p>
-<blockquote>
-<p>实现原理</p>
-<p>在NIO中，使用Selector和Channel实现同步非阻塞。所有I/O操作都是异步的，在注册事件后可以立即返回，当事件发生时通过调用Selector的select方法来检索已经就绪的事件，并处理相应的数据。</p>
-<p>Selector是一个高效的多路复用器，监控多个Channel的状态，并将处于就绪状态的Channel加入到就绪队列中，以提高系统吞吐量和并发性能。主线程负责创建和管理Selector以及所有的Channel，</p>
-<p>主线程在NIO中通常是唯一的，负责创建和管理Selector以及所有的Channel，并且通过不断地调用Selector的select方法，检测Channel是否有可读或可写的数据。当数据准备好时，主线程将其传递给子线程进行处理，然后回到主线程，继续监听其他Channel的状态变化。由于Channel的读写操作是非阻塞的，因此主线程永远不会被阻塞，可以充分利用CPU资源。</p>
-<p>另外，NIO 还引入了缓冲区 Buffer 的概念，数据需要先读入到缓冲区中，然后再从缓冲区写出来，这样可以灵活地控制数据的传输。此外，由于缓冲区对数据进行了封装，在数据传输过程中可以进行加解密、压缩等操作，提高了数据的安全性和可靠性。</p>
-</blockquote>
-<blockquote>
-<p>下面这个基于Java NIO的样例：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"><span class="keyword">import</span> java.nio.ByteBuffer;</span><br><span class="line"><span class="keyword">import</span> java.nio.channels.SocketChannel;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">NioClient</span> </span>&#123;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">  SocketChannel socketChannel = SocketChannel.open();</span><br><span class="line">  socketChannel.connect(<span class="keyword">new</span> InetSocketAddress(<span class="string">&quot;example.com&quot;</span>, <span class="number">80</span>));</span><br><span class="line"></span><br><span class="line">  String message = <span class="string">&quot;Hello, server!&quot;</span>;</span><br><span class="line">  ByteBuffer buffer = ByteBuffer.allocate(<span class="number">1024</span>);</span><br><span class="line">  buffer.put(message.getBytes());</span><br><span class="line">  buffer.flip();</span><br><span class="line"></span><br><span class="line">  <span class="keyword">while</span> (buffer.hasRemaining()) &#123;</span><br><span class="line">      socketChannel.write(buffer);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  buffer.clear();</span><br><span class="line">  <span class="keyword">int</span> bytesRead = socketChannel.read(buffer);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">while</span> (bytesRead != -<span class="number">1</span>) &#123;</span><br><span class="line">      buffer.flip();</span><br><span class="line">      <span class="keyword">while</span> (buffer.hasRemaining()) &#123;</span><br><span class="line">          System.out.print((<span class="keyword">char</span>) buffer.get());</span><br><span class="line">      &#125;</span><br><span class="line">      buffer.clear();</span><br><span class="line">      bytesRead = socketChannel.read(buffer);</span><br><span class="line">  &#125;</span><br><span class="line">  socketChannel.close();</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>这个样例演示了如何使用NIO的SocketChannel来连接到一个远程服务器，并向其发送一条消息。首先，我们创建了一个SocketChannel对象，并使用它的connect()方法来连接到指定的服务器地址和端口。接着，我们将要发送的消息转换成ByteBuffer，并使用SocketChannel的write()方法将其发送给服务器。然后，我们使用同样的SocketChannel对象读取服务器响应，将其读入ByteBuffer中，并将其打印到控制台上。</p>
-<p>这个样例还演示了如何在NIO中使用ByteBuffer对象来处理输入输出数据。当我们需要读取数据时，我们首先调用flip()方法来准备缓冲区进行读操作。然后，我们可以通过调用get()方法逐个读取数据，并对其进行相应的处理。最后，我们使用clear()方法来清空缓冲区，以便可以再次使用它来读写数据。</p>
-</blockquote>
-<h4 id="AIO"><a href="#AIO" class="headerlink" title="AIO"></a>AIO</h4><p>AIO (Asynchronous I/O)是Java I/O模型的另一种改进版异步型IO。主要用于处理网络通信和文件I/O操作，在这个模型中，I/O操作不再由程序自己完成，而是由操作系统完成。当一个I/O操作完成后，操作系统会通知应用程序，以便应用程序可以执行下一步操作。相比于NIO，AIO可以处理更多的连接，并且具有更好的可伸缩性。但是，AIO使用起来更复杂，对于一些简单的应用程序可能过于复杂。</p>
-<p>在AIO模型中，当一个I/O操作完成后，会通过回调函数的方式来通知应用程序，而不需要等待I/O操作的结果返回。这样可以避免线程的阻塞，提高了系统的并发性能。</p>
-<p>NIO是半同步半异步的I/O模型，而AIO则是纯异步的I/O模型。在NIO中，读写操作仍然会阻塞线程，只有就绪事件才是异步处理的；而在AIO中，读写操作不会阻塞线程，通过回调函数的方式来实现异步处理。</p>
-
-            
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">I/O</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2024/03/15/%E5%85%AB%E8%BE%BE%E7%8B%97%E8%83%9C%E8%B4%9F%E6%A6%9C/">iMessage小游戏胜负榜</a>
+    </h1>
+  
 
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://zrichard9527.github.io/2023/06/13/I-O-%E6%A8%A1%E5%9E%8B/" alt="微信分享二维码">
-    </div>
-</div>
+        <div class="article-info info-on-right">
+          
+          
 
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2023/06/14/JVM/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          JVM
-        
-      </div>
-    </a>
   
   
-    <a href="/2023/05/18/%E5%A4%9A%E7%BA%BF%E7%A8%8B/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">多线程</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-  
+    </div></section>
   
 
-  
-  <div id="SOHUCS" sid="I-O-模型" ></div> 
-<script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
-<script type="text/javascript">
-    window.changyan.api.config({
-        appid: "cyvwEGDgV",
-        conf: "7a2b35ce4ad9218ea4daedb4fc89a1a2"
-    });
-</script>
-</script>
-  
-
-  
-
-  
+    
 
 
           </div>
@@ -425,8 +247,8 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: true,
-		isArchive: false,
+		isPost: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
